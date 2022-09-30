@@ -79,6 +79,8 @@ To implement a ```list``` in Python, we place the values separated by commas ins
 :::::::::::::::::::::::::::::::::::: 
 
 
+
+
 ```python
 table = [5, 21, 5, -1]
 	
@@ -1861,7 +1863,7 @@ print("Type:", type(table_rev))
 ```
 
 ```{.output}
-Result: <list_reverseiterator object at 0x7f1d5a115540>
+Result: <list_reverseiterator object at 0x7f31529ee440>
 Type: <class 'list_reverseiterator'>
 ```
 

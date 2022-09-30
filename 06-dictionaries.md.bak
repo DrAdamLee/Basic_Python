@@ -83,6 +83,8 @@ When constructing a long ```dict``` with several *items* that span over several 
 We can therefore implement the diagram displayed in [Figure](#assArr) in Python as follows:
 
 
+
+
 ```python
 protein_kinases = {
   'PKA': 'Involved in regulation of glycogen, sugar, and lipid metabolism.',
@@ -92,11 +94,17 @@ protein_kinases = {
 	
 print(protein_kinases)
 	
-print(type(protein_kinases))
 ```
 
 ```{.output}
 {'PKA': 'Involved in regulation of glycogen, sugar, and lipid metabolism.', 'PKC': 'Regulates signal transduction pathways such as the Wnt pathway.', 'CK1': 'Controls the function of other proteins through phosphorylation.'}
+```
+
+```python
+print(type(protein_kinases))
+```
+
+```{.output}
 <class 'dict'>
 ```
 
