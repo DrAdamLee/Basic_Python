@@ -2137,7 +2137,8 @@ Display the results in the following format:
 ```
 
 Given that: 
-```   
+
+```python
 a = True
 b = False
 c = True
@@ -2165,7 +2166,7 @@ print('2.', a == c)
 ```
 
 ```{.output}
-2. False
+2. True
 ```
 ::::::::::::::::::	
 
@@ -2179,7 +2180,7 @@ print('3.', a or b)
 ```
 
 ```{.output}
-3. 15
+3. True
 ```
 ::::::::::::::::::
 	
@@ -2193,7 +2194,7 @@ print('4.', a and b)
 ```
 
 ```{.output}
-4. 4
+4. False
 ```
 ::::::::::::::::::	
 
@@ -2206,7 +2207,7 @@ print('5.', a or b and c)
 ```
 
 ```{.output}
-5. 15
+5. True
 ```
 ::::::::::::::::::
 
@@ -2219,7 +2220,7 @@ print('6.', (a or b) and c)
 ```
 
 ```{.output}
-6. 18.84956
+6. True
 ```
 ::::::::::::::::::
 
@@ -2232,7 +2233,7 @@ print('7.', not a or (b and c))
 ```
 
 ```{.output}
-7. 18.84956
+7. False
 ```
 ::::::::::::::::::
 
@@ -2245,7 +2246,7 @@ print('8.', not a or not(b and c))
 ```
 
 ```{.output}
-8. False
+8. True
 ```
 ::::::::::::::::::
 
