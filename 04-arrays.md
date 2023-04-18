@@ -1871,7 +1871,7 @@ print("Type:", type(table_rev))
 ```
 
 ```{.output}
-Result: <list_reverseiterator object at 0x7f9e8d55eda0>
+Result: <list_reverseiterator object at 0x7fd6c19eaf80>
 Type: <class 'list_reverseiterator'>
 ```
 
