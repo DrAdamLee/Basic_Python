@@ -9,7 +9,7 @@
 # cp: Carpentries (to use for instructor traning for instance)
 carpentry: l2d
 varnish: LearnToDiscover/varnish
-sandpaper: milanmlft/sandpaper@l2d
+sandpaper: milanmlft/sandpaper@use_python
 
 # Overall title for pages.
 title: Basic Python
