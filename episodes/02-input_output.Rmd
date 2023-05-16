@@ -30,12 +30,12 @@ output:
 - Understanding mathematical and logical operations
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(reticulate)
+<!-- ```{r setup, include=FALSE} -->
+<!-- knitr::opts_chunk$set(echo = TRUE) -->
+<!-- library(reticulate) -->
 
-use_virtualenv("r-env")
-```
+<!-- use_virtualenv("r-env") -->
+<!-- ``` -->
 
 <p align = "center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qr-UBp_AeDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
