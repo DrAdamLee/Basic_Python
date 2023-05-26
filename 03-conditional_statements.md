@@ -42,8 +42,6 @@ This chapter assumes that you are familiar with the following concepts in Python
 
 ::::::::::::::::::::::::::::::::
 
-
-
 <p style='text-align: justify;'>
 When we construct logical expressions, we almost always do so because we need to test something. The definition of a process through which we test our logical expressions and provide directives on how to proceed is known in computer science as a *conditional statement*. Conditional statements are a feature of programming languages. This means that although their definitions and grammar may vary slightly from one programming language to another, their principles are almost universally identical.
 </p>

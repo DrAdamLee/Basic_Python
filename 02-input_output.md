@@ -30,8 +30,6 @@ output:
 - Understanding mathematical and logical operations
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-
 <p align = "center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qr-UBp_AeDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
@@ -852,10 +850,7 @@ value_b = int(value_a)
 ```
 
 ```{.error}
-Error in py_call_impl(callable, dots$args, dots$keywords): ValueError: invalid literal for int() with base 10: '12y'
-
-Detailed traceback:
-  File "<string>", line 1, in <module>
+Error: ValueError: invalid literal for int() with base 10: '12y'
 ```
 
 ::::::::::::::::::::::::::::::: challenge 

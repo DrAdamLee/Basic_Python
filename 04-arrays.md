@@ -87,8 +87,6 @@ To implement a ```list``` in Python, we place the values separated by commas ins
 :::::::::::::::::::::::::::::::::::: 
 
 
-
-
 ```python
 table = [5, 21, 5, -1]
 	
@@ -287,10 +285,7 @@ print(table[4])
 ```
 
 ```{.error}
-Error in py_call_impl(callable, dots$args, dots$keywords): IndexError: list index out of range
-
-Detailed traceback:
-  File "<string>", line 1, in <module>
+Error: IndexError: list index out of range
 ```
 
 :::::::::::::::::::::::::::::::::::: callout
@@ -522,10 +517,7 @@ print(table.index(9))
 ```
 
 ```{.error}
-Error in py_call_impl(callable, dots$args, dots$keywords): ValueError: 9 is not in list
-
-Detailed traceback:
-  File "<string>", line 1, in <module>
+Error: ValueError: 9 is not in list
 ```
 
 
@@ -972,10 +964,7 @@ string.remove(20)
 ```
 
 ```{.error}
-Error in py_call_impl(callable, dots$args, dots$keywords): AttributeError: 'str' object has no attribute 'remove'
-
-Detailed traceback:
-  File "<string>", line 1, in <module>
+Error: AttributeError: 'str' object has no attribute 'remove'
 ```
 
 ```python
@@ -1871,7 +1860,7 @@ print("Type:", type(table_rev))
 ```
 
 ```{.output}
-Result: <list_reverseiterator object at 0x7fd6c19eaf80>
+Result: <list_reverseiterator object at 0x7fb264d09870>
 Type: <class 'list_reverseiterator'>
 ```
 
@@ -2479,10 +2468,7 @@ coreceptors[1] = 'LRP5/6'
 ```
 
 ```{.error}
-Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: 'tuple' object does not support item assignment
-
-Detailed traceback:
-  File "<string>", line 1, in <module>
+Error: TypeError: 'tuple' object does not support item assignment
 ```
 
 Even though ```tuple``` is an immutable type, it can contain both mutable and immutable objects:

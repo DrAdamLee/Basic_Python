@@ -79,8 +79,6 @@ numbers = [-3, -2, 5, 0, 12]
 Now we would like to multiply each number by 2. Based on what we have learned thus far, this is how we would approach this problem:
 
 
-
-
 ```python
 numbers = [-3, -2, 5, 0, 12]
 	
