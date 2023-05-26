@@ -270,7 +270,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Variables, Types, and Operations</h1>
-        <p> Last updated on 2023-04-18 | 
+        <p> Last updated on 2023-05-26 | 
         
         <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/02-input_output.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -284,9 +284,12 @@
 
         
 
-<p><a href="../02-input_output.md.pdf"><strong>Download Chapter pdf</strong></a></p>
-<p><a href="../02-input_output.ipynb"><strong>Download Chapter notebook (ipynb)</strong></a></p>
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdr0capF7jloJhPH3Pki1B3LZoKOG16poOpuVJ7SL2LkwLHQA/viewform?pli=1" class="external-link"><span style="color: rgb(255, 0, 0);"><strong>Mandatory Lesson Feedback Survey</strong></span></a></p>
+<p><a href="../02-input_output.md.pdf"><strong>Download Chapter
+pdf</strong></a></p>
+<p><a href="../02-input_output.ipynb"><strong>Download Chapter notebook
+(ipynb)</strong></a></p>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdr0capF7jloJhPH3Pki1B3LZoKOG16poOpuVJ7SL2LkwLHQA/viewform?pli=1" class="external-link"><span style="color: rgb(255, 0, 0);"><strong>Mandatory Lesson Feedback
+Survey</strong></span></a></p>
 <div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
@@ -330,26 +333,48 @@
 </p>
 <p><br></p>
 <p style="text-align: justify;">
-In programming, we process data and produce outputs. When data is being processed, it is stored in a memory, so that it is readily available, and can therefore be subject to the processes we want to apply.
+In programming, we process data and produce outputs. When data is being
+processed, it is stored in a memory, so that it is readily available,
+and can therefore be subject to the processes we want to apply.
 </p>
 <p style="text-align: justify;">
-Throughout this section, we will discuss how to handle data in Python. We start by displaying data on the screen, and see how to receive input from a user. We then use these techniques to perform different mathematical and logical operations. This chapter introduces the fundamental principles that we employ every time we code in Python. On that account, make sure you understand everything before moving on.
+Throughout this section, we will discuss how to handle data in Python.
+We start by displaying data on the screen, and see how to receive input
+from a user. We then use these techniques to perform different
+mathematical and logical operations. This chapter introduces the
+fundamental principles that we employ every time we code in Python. On
+that account, make sure you understand everything before moving on.
 </p>
 <section id="operations"><h2 class="section-heading">I/O Operations<a class="anchor" aria-label="anchor" href="#operations"></a>
 </h2>
 <hr class="half-width"><p style="text-align: justify;">
-In computer science, input or output operations refer to the communication between an information processing system such as a computer, and the outside world, which may be a user or another computer. Such communications are more commonly known as <em>I/O operations</em>. In general, the outside world — especially in the context of this course, may be loosely defined as anything that falls outside of the coding environment.
+In computer science, input or output operations refer to the
+communication between an information processing system such as a
+computer, and the outside world, which may be a user or another
+computer. Such communications are more commonly known as <em>I/O
+operations</em>. In general, the outside world — especially in the
+context of this course, may be loosely defined as anything that falls
+outside of the coding environment.
 </p>
-<div id="callout1" class="callout callout">
+<div id="remember" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember" class="callout-inner">
-<h3 class="callout-title">REMEMBER<a class="anchor" aria-label="anchor" href="#callout1"></a>
+<h3 class="callout-title">REMEMBER<a class="anchor" aria-label="anchor" href="#remember"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-Only what we define within the environment and what we store in the memory is directly controlled by our application. We may access or take control over other environments through certain mediums; however, such interactions are classified as I/O operations. An example of this is interacting with a file on our computer, which we discuss in the topic of <a href="07-strings.html">Strings</a>. Whilst we have complete control over a file while working on it (e.g. reading from it or writing to it), the access to the file and the transmission of data is in fact controlled and managed not by the programming environment but by the operating system of the computer.
+Only what we define within the environment and what we store in the
+memory is directly controlled by our application. We may access or take
+control over other environments through certain mediums; however, such
+interactions are classified as I/O operations. An example of this is
+interacting with a file on our computer, which we discuss in the topic
+of <a href="07-strings.html">Strings</a>. Whilst we have complete
+control over a file while working on it (e.g. reading from it or writing
+to it), the access to the file and the transmission of data is in fact
+controlled and managed not by the programming environment but by the
+operating system of the computer.
 </p>
 </div>
 </div>
@@ -360,87 +385,128 @@ Only what we define within the environment and what we store in the memory is di
 <li><p>writing or reading data to and from a file or a database</p></li>
 <li><p>downloading data from the Internet</p></li>
 <li><p>operating a hardware (e.g. a robot)</p></li>
-</ul><div id="prereq1" class="callout prereq">
+</ul><div id="advanced-topic" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="advanced-topic" class="callout-inner">
-<h3 class="callout-title">Advanced Topic<a class="anchor" aria-label="anchor" href="#prereq1"></a>
+<h3 class="callout-title">Advanced Topic<a class="anchor" aria-label="anchor" href="#advanced-topic"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-If you are interested in learning more about I/O systems and how they are handled at operating system level, you might benefit from chapter 13 of <a href="https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf" class="external-link"><em>Operating Systems Concepts, 10<sup>th</sup> ed.</em></a> by Abraham Silberschatz, Greg Gagne, and Peter Galvin.
+If you are interested in learning more about I/O systems and how they
+are handled at operating system level, you might benefit from chapter 13
+of <a href="https://os.ecci.ucr.ac.cr/slides/Abraham-Silberschatz-Operating-System-Concepts-10th-2018.pdf" class="external-link"><em>Operating
+Systems Concepts, 10<sup>th</sup> ed.</em></a> by Abraham Silberschatz,
+Greg Gagne, and Peter Galvin.
 </p>
 </div>
 </div>
 </div>
 <div class="section level3">
 <h3 id="io-operations-in-python"><strong>I/O Operations in Python</strong><a class="anchor" aria-label="anchor" href="#io-operations-in-python"></a></h3>
-<p><a href="https://docs.python.org/3/tutorial/inputoutput.html" class="external-link"><strong>Input and Output</strong></a></p>
+<p><a href="https://docs.python.org/3/tutorial/inputoutput.html" class="external-link"><strong>Input
+and Output</strong></a></p>
 <p style="text-align: justify;">
-In this section, we learn about two fundamental methods of I/O operations in Python. We will be using these methods throughout the course, so it is essential that you feel comfortable with them and the way they work before moving on.
+In this section, we learn about two fundamental methods of I/O
+operations in Python. We will be using these methods throughout the
+course, so it is essential that you feel comfortable with them and the
+way they work before moving on.
 </p>
-<div id="discussion1" class="callout discussion">
+<div id="sub:ProducingAnOutput" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="sub:ProducingAnOutput" class="callout-inner">
-<h3 class="callout-title">Producing an output<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+<h3 class="callout-title">Producing an output<a class="anchor" aria-label="anchor" href="#sub:ProducingAnOutput"></a>
 </h3>
 <div class="callout-content">
 <p><a href="https://docs.python.org/3/library/functions.html#print" class="external-link"><strong>Print</strong></a></p>
 <p style="text-align: justify;">
-The term <code>output</code> in reference to an application typically refers to data that has either been generated or manipulated by that application.
+The term <code>output</code> in reference to an application typically
+refers to data that has either been generated or manipulated by that
+application.
 </p>
 <p style="text-align: justify;">
-For example; we have two number and we would like to calculate their sum. The action of calculating the sum is itself a <a href="#math_ops"><em>mathematical operation</em></a> (discussed in the coming section). The result of our calculation is called an <code>output</code>. Once we obtain the result, we might want to save it in a file or display it on the screen, in which case we will be performing an <em>I/O operation</em>.
+For example; we have two number and we would like to calculate their
+sum. The action of calculating the sum is itself a <a href="#math_ops"><em>mathematical operation</em></a> (discussed in the
+coming section). The result of our calculation is called an
+<code>output</code>. Once we obtain the result, we might want to save it
+in a file or display it on the screen, in which case we will be
+performing an <em>I/O operation</em>.
 </p>
 <p style="text-align: justify;">
-The simplest and most frequently used method for generating an output in almost every modern programming language is to display something on the screen. We recommend using JupyterLab notebooks to run our scripts and the typical method to produce an output is to display it in cell below the code.To do this, we will call a dedicated built-in function named <kbd>print()</kbd>.
+The simplest and most frequently used method for generating an output in
+almost every modern programming language is to display something on the
+screen. We recommend using JupyterLab notebooks to run our scripts and
+the typical method to produce an output is to display it in cell below
+the code.To do this, we will call a dedicated built-in function named
+<kbd>print()</kbd>.
 </p>
-<div id="callout2" class="callout callout">
+<div id="remember-1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-1" class="callout-inner">
-<h3 class="callout-title">REMEMBER<a class="anchor" aria-label="anchor" href="#callout2"></a>
+<h3 class="callout-title">REMEMBER<a class="anchor" aria-label="anchor" href="#remember-1"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-In programming, a <code>function</code> is essentially an isolated piece of code. It usually to takes some inputs, <em>does </em>something to or with them, and produces an <code>output</code>. The pair of (typically round) parenthesis that follow a function are there to provide the function with the <em>input arguments</em> it needs when we <em>call</em> it, so that it can do what it is supposed to do using our data. We will explore functions in more details in Lesson 4 <a href="06-functions.html">Functions</a>.
+In programming, a <code>function</code> is essentially an isolated piece
+of code. It usually to takes some inputs, <em>does </em>something to or
+with them, and produces an <code>output</code>. The pair of (typically
+round) parenthesis that follow a function are there to provide the
+function with the <em>input arguments</em> it needs when we
+<em>call</em> it, so that it can do what it is supposed to do using our
+data. We will explore functions in more details in Lesson 4 <a href="06-functions.html">Functions</a>.
 </p>
 </div>
 </div>
 </div>
 <p style="text-align: justify;">
-The <kbd>print()</kbd> function can take several inputs and performs different tasks. Its primary objective, however, is to take some values as input and display them on the screen. Here is how it works:
+The <kbd>print()</kbd> function can take several inputs and performs
+different tasks. Its primary objective, however, is to take some values
+as input and display them on the screen. Here is how it works:
 </p>
-<p>Suppose we want to display some text in the terminal. To do so, we write:</p>
+<p>Suppose we want to display some text in the terminal. To do so, we
+write:</p>
 <pre><code><span><span class="fu">print</span><span class="op">(</span><span class="st">'Hello world!'</span><span class="op">)</span></span></code></pre>
 <p style="text-align: justify;">
-in a cell of our notebook (or, if not using a notebook, an editor or IDE) and save the notebook in a file. This is now a fully functioning Python programme that we can run using the Python interpreter.
+in a cell of our notebook (or, if not using a notebook, an editor or
+IDE) and save the notebook in a file. This is now a fully functioning
+Python programme that we can run using the Python interpreter.
 </p>
 <p style="text-align: justify;">
-If you are using an Integrated Development Environment (IDE) — e.g. Visual Studio Code, you have to save the code in a file with extension <code>.py</code> and may then execute your code using the internal tools provided by that IDE. The specifics of how you do so depend on the IDE that you are using.
+If you are using an Integrated Development Environment (IDE) —
+e.g. Visual Studio Code, you have to save the code in a file with
+extension <code>.py</code> and may then execute your code using the
+internal tools provided by that IDE. The specifics of how you do so
+depend on the IDE that you are using.
 </p>
 <p style="text-align: justify;">
-<code>.py</code> Python scripts can also be executed manually. To do so, we open the terminal in MacOS or Linux or the command prompt (CMD) in Windows and navigate to the directory where we saved the script.
+<code>.py</code> Python scripts can also be executed manually. To do so,
+we open the terminal in MacOS or Linux or the command prompt (CMD) in
+Windows and navigate to the directory where we saved the script.
 </p>
-<div id="prereq2" class="callout prereq">
+<div id="note" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="note" class="callout-inner">
-<h3 class="callout-title">NOTE<a class="anchor" aria-label="anchor" href="#prereq2"></a>
+<h3 class="callout-title">NOTE<a class="anchor" aria-label="anchor" href="#note"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-If you don’t know how to navigate in the terminal, see the example in section <a href="#terminal">How to use terminal environment?</a> at the end of this chapter.
+If you don’t know how to navigate in the terminal, see the example in
+section <a href="#terminal">How to use terminal environment?</a> at the
+end of this chapter.
 </p>
 </div>
 </div>
 </div>
-<p>Once in the correct directory, we run a script called <code>script_a.py</code> by typing <code>python3 script_a.py</code> in our terminal as follows:</p>
+<p>Once in the correct directory, we run a script called
+<code>script_a.py</code> by typing <code>python3 script_a.py</code> in
+our terminal as follows:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -452,33 +518,46 @@ If you don’t know how to navigate in the terminal, see the example in section 
 <pre class="output" tabindex="0"><code>Hello world!</code></pre>
 </div>
 <p style="text-align: justify;">
-This will call the Python 3 interpreter to execute the code we wrote in <code>script_a.py</code>. Once executed, which in this case should be instantaneously, we should see the output.
+This will call the Python 3 interpreter to execute the code we wrote in
+<code>script_a.py</code>. Once executed, which in this case should be
+instantaneously, we should see the output.
 </p>
 <p style="text-align: justify;">
-In a JupyterLab notebook we can press the keyboard shortcut ‘shift-enter’ to execute the code in a cell. The output will be displayed below the code cell.
+In a JupyterLab notebook we can press the keyboard shortcut
+‘shift-enter’ to execute the code in a cell. The output will be
+displayed below the code cell.
 </p>
 <p style="text-align: justify;">
-<strong>Congratulations</strong> you have now successfully written and executed your first programme in Python.
+<strong>Congratulations</strong> you have now successfully written and
+executed your first programme in Python.
 </p>
 </div>
 </div>
 </div>
-<div id="callout3" class="callout callout">
+<div id="remember-2" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-2" class="callout-inner">
-<h3 class="callout-title">REMEMBER<a class="anchor" aria-label="anchor" href="#callout3"></a>
+<h3 class="callout-title">REMEMBER<a class="anchor" aria-label="anchor" href="#remember-2"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-We know <kbd>print()</kbd> is a <em>function</em> because it ends with a pair of parenthesis, and it is written entirely in lowercase characters <a href="https://www.python.org/dev/peps/pep-0008/#function-names" class="external-link">PEP-8: Function Names</a>. Some IDEs change color when they encounter built-in functions in the code so that we won’t accidentally overwrite them. We shall discuss <em>functions</em> in more details in Lesson 4 <a href="06-functions.html">Functions</a>.
+We know <kbd>print()</kbd> is a <em>function</em> because it ends with a
+pair of parenthesis, and it is written entirely in lowercase characters
+<a href="https://www.python.org/dev/peps/pep-0008/#function-names" class="external-link">PEP-8:
+Function Names</a>. Some IDEs change color when they encounter built-in
+functions in the code so that we won’t accidentally overwrite them. We
+shall discuss <em>functions</em> in more details in Lesson 4 <a href="06-functions.html">Functions</a>.
 </p>
 </div>
 </div>
 </div>
 <p style="text-align: justify;">
-We can pass more than a single value to the <kbd>print()</kbd> function, provided that they are separated with a comma. For instance, if we write the code below and run the script, the results would be as shown in <em>output</em>.
+We can pass more than a single value to the <kbd>print()</kbd> function,
+provided that they are separated with a comma. For instance, if we write
+the code below and run the script, the results would be as shown in
+<em>output</em>.
 </p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -491,7 +570,10 @@ We can pass more than a single value to the <kbd>print()</kbd> function, provide
 <pre class="output" tabindex="0"><code>Hello John</code></pre>
 </div>
 <p style="text-align: justify;">
-Notice that there is a space between <span style="color: rgb(32, 121, 77);">‘Hello’</span> and <span style="color: rgb(32, 121, 77);">‘John’</span> even though we did not include a space in our text. This is the default behaviour of the <kbd>print()</kbd> function when it receives more than a single value (argument).
+Notice that there is a space between <span style="color: rgb(32, 121, 77);">‘Hello’</span> and <span style="color: rgb(32, 121, 77);">‘John’</span> even though we did not
+include a space in our text. This is the default behaviour of the
+<kbd>print()</kbd> function when it receives more than a single value
+(argument).
 </p>
 <p>This default behaviour may be changed:</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -524,12 +606,12 @@ Notice that there is a space between <span style="color: rgb(32, 121, 77);">‘H
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="va">Jane.21.London</span></span></code></pre>
 </div>
-<figure><img src="../fig/functionCall.png" alt="" class="figure mx-auto d-block"><figcaption>Explanation of a function call</figcaption></figure><div id="challenge1" class="callout challenge">
+<figure><img src="../fig/functionCall.png" alt="" class="figure mx-auto d-block"><figcaption>Explanation of a function call</figcaption></figure><div id="do-it-yourself" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself"></a>
 </h3>
 <div class="callout-content">
 <p>Write code that displays the following output:</p>
@@ -562,76 +644,103 @@ Notice that there is a space between <span style="color: rgb(32, 121, 77);">‘H
 </div>
 </div>
 </div>
-<figure><img src="../fig/prompt.png" id="fig:terLinux" alt="" class="figure mx-auto d-block"><figcaption>Terminal window on a Linux computer</figcaption></figure><figure><img src="../fig/MacPrompt.png" id="fig:terMac" alt="" class="figure mx-auto d-block"><figcaption>Terminal window on a Mac</figcaption></figure><div id="discussion2" class="callout discussion">
+<figure><img src="../fig/prompt.png" id="fig:terLinux" alt="" class="figure mx-auto d-block"><figcaption>Terminal window on a Linux computer</figcaption></figure><figure><img src="../fig/MacPrompt.png" id="fig:terMac" alt="" class="figure mx-auto d-block"><figcaption>Terminal window on a Mac</figcaption></figure><div id="receiving-an-input" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="receiving-an-input" class="callout-inner">
-<h3 class="callout-title">Receiving an input<a class="anchor" aria-label="anchor" href="#discussion2"></a>
+<h3 class="callout-title">Receiving an input<a class="anchor" aria-label="anchor" href="#receiving-an-input"></a>
 </h3>
 <div class="callout-content">
 <p><a href="https://docs.python.org/3/library/functions.html#input" class="external-link"><strong>Input</strong></a></p>
 <p style="text-align: justify;">
-Inputs are I/O operations that involve receiving some data from the outside world. This might include reading the contents of a file, downloading something from the Internet, or asking the user to enter a value.
+Inputs are I/O operations that involve receiving some data from the
+outside world. This might include reading the contents of a file,
+downloading something from the Internet, or asking the user to enter a
+value.
 </p>
 <p style="text-align: justify;">
-The simplest way to acquire an input is to ask the user to enter a value in the terminal. To do so, we use a dedicated built-in function called <kbd>input()</kbd>.
+The simplest way to acquire an input is to ask the user to enter a value
+in the terminal. To do so, we use a dedicated built-in function called
+<kbd>input()</kbd>.
 </p>
-<div id="callout4" class="callout callout">
+<div id="note-1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="note-1" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#callout4"></a>
+<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-1"></a>
 </h3>
 <div class="callout-content">
-<p>In a Unix system (Mac OS or Linux), a tilde (~) is an alias for a user’s home directory.</p>
+<p>In a Unix system (Mac OS or Linux), a tilde (~) is an alias for a
+user’s home directory.</p>
 </div>
 </div>
 </div>
 <p style="text-align: justify;">
-The function takes a single <em>argument</em> called <code>prompt</code>. Prompt is the text displayed in the terminal to ask the user for an input. Figure <a href="#fig:terLinux">Terminal window on a Linux computer</a> and <a href="#fig:terMac">Terminal window on a Mac</a>, illustrates a screen shot of my personal computer’s prompt, where it displays my user name (i.e. <code>pouria</code>) followed by a tilde (~). A terminal prompt may be different in each computer and operating system.
+The function takes a single <em>argument</em> called
+<code>prompt</code>. Prompt is the text displayed in the terminal to ask
+the user for an input. Figure <a href="#fig:terLinux">Terminal window on
+a Linux computer</a> and <a href="#fig:terMac">Terminal window on a
+Mac</a>, illustrates a screen shot of my personal computer’s prompt,
+where it displays my user name (i.e. <code>pouria</code>) followed by a
+tilde (~). A terminal prompt may be different in each computer and
+operating system.
 </p>
 <p>Here is how we implement the <kbd>input()</kbd> function:</p>
 <pre><code><span><span class="fu">input</span><span class="op">(</span><span class="st">'Please enter your name: '</span><span class="op">)</span></span></code></pre>
 <p>which is exactly the same as:</p>
 <pre><code><span><span class="fu">input</span><span class="op">(</span>prompt<span class="op">=</span><span class="st">'Please enter your name: '</span><span class="op">)</span></span></code></pre>
-<p>If we save one of the above in a notebook and execute it, we will see:</p>
+<p>If we save one of the above in a notebook and execute it, we will
+see:</p>
 <pre><code>python3 script_b.py
 
 Please enter your name: _</code></pre>
 <p style="text-align: justify;">
-The terminal cursor, displayed as an underscore in our example, will be in front of the prompt (i.e. <code>'Please enter your name: '</code>) waiting for a response. Once it receives a response, it will proceed to run the rest of the code (if any), or terminate the execution.
+The terminal cursor, displayed as an underscore in our example, will be
+in front of the prompt (i.e. <code>'Please enter your name: '</code>)
+waiting for a response. Once it receives a response, it will proceed to
+run the rest of the code (if any), or terminate the execution.
 </p>
 <p style="text-align: justify;">
-We may store the user’s response in a variable. Variables are the topic of the next section, where we shall also review more examples on <kbd>input()</kbd> and how we can use it to produce results based on the responses we receive from the user.
+We may store the user’s response in a variable. Variables are the topic
+of the next section, where we shall also review more examples on
+<kbd>input()</kbd> and how we can use it to produce results based on the
+responses we receive from the user.
 </p>
 </div>
 </div>
 </div>
-<div id="callout5" class="callout callout">
+<div id="remember-3" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-3" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout5"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-3"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-Python is an interpreted language; that is, the code we write is executed by the Python interpreter one line at a time. The <kbd>input()</kbd> function performs a <em>blocking</em> process. This means that the execution of the code by the Python interpreter is halted upon encountering an <kbd>input()</kbd> function until the user enters a value. Once a value is entered, the interpreter then proceeds to execute the next line.
+Python is an interpreted language; that is, the code we write is
+executed by the Python interpreter one line at a time. The
+<kbd>input()</kbd> function performs a <em>blocking</em> process. This
+means that the execution of the code by the Python interpreter is halted
+upon encountering an <kbd>input()</kbd> function until the user enters a
+value. Once a value is entered, the interpreter then proceeds to execute
+the next line.
 </p>
 </div>
 </div>
 </div>
-<div id="challenge2" class="callout challenge">
+<div id="do-it-yourself-1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-1" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself-1"></a>
 </h3>
 <div class="callout-content">
-<p>Write a script that asks the user to enter the name of a protein in the terminal.</p>
+<p>Write a script that asks the user to enter the name of a protein in
+the terminal.</p>
 </div>
 </div>
 </div>
@@ -653,25 +762,41 @@ Python is an interpreted language; that is, the code we write is executed by the
 </section><section id="varTypes"><h2 class="section-heading">Variables And Types<a class="anchor" aria-label="anchor" href="#varTypes"></a>
 </h2>
 <hr class="half-width"><p style="text-align: justify;">
-We use variables to store data in the memory. Each variable has 3 characteristics: <em>scope</em>, <em>name</em>, and <em>type</em>. <em>Scope</em> and <em>name</em> must be mutually unique. Starting with <em>name</em>, we will discuss each of these characteristics in more details throughout this chapter.
+We use variables to store data in the memory. Each variable has 3
+characteristics: <em>scope</em>, <em>name</em>, and <em>type</em>.
+<em>Scope</em> and <em>name</em> must be mutually unique. Starting with
+<em>name</em>, we will discuss each of these characteristics in more
+details throughout this chapter.
 </p>
 <div class="section level3">
 <h3 id="subsec:variableNames"><strong>Variable names</strong><a class="anchor" aria-label="anchor" href="#subsec:variableNames"></a></h3>
-<p><a href="https://www.python.org/dev/peps/pep-0008/#naming-conventions" class="external-link"><strong>PEP–8 Naming Conventions</strong></a></p>
+<p><a href="https://www.python.org/dev/peps/pep-0008/#naming-conventions" class="external-link"><strong>PEP–8
+Naming Conventions</strong></a></p>
 <p style="text-align: justify;">
-Name of a variable is in fact an alias for a location in the memory. You can think of it as a postbox, which is used as a substitute for an address. Similarly, we use variable names so we wouldn’t have to use the actual address to the location we want in the memory because it would look something like <code>0x106fb8348</code>.
+Name of a variable is in fact an alias for a location in the memory. You
+can think of it as a postbox, which is used as a substitute for an
+address. Similarly, we use variable names so we wouldn’t have to use the
+actual address to the location we want in the memory because it would
+look something like <code>0x106fb8348</code>.
 </p>
-<p>There are some relatively simple rules to follow when defining variable names, which ultimately boil down to:</p>
-<figure><img src="../fig/variable_table.png" class="figure mx-auto d-block"></figure><div id="callout6" class="callout callout">
+<p>There are some relatively simple rules to follow when defining
+variable names, which ultimately boil down to:</p>
+<figure><img src="../fig/variable_table.png" class="figure mx-auto d-block"></figure><div id="remember-4" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-4" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout6"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-4"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-We should never overwrite an existing, built-in definition or identifier (e.g. <code>int</code> or <code>print</code>). We will be learning many such definitions and identifiers as we progress through this course. Nonetheless, the Jupyterlab notebook as well as any good IDE highlights syntaxes and built-in identifiers in different colours. In JupyterLab the default for built-in definitions is green. The exact colouring scheme depends on the IDE and the theme.
+We should never overwrite an existing, built-in definition or identifier
+(e.g. <code>int</code> or <code>print</code>). We will be learning many
+such definitions and identifiers as we progress through this course.
+Nonetheless, the Jupyterlab notebook as well as any good IDE highlights
+syntaxes and built-in identifiers in different colours. In JupyterLab
+the default for built-in definitions is green. The exact colouring
+scheme depends on the IDE and the theme.
 </p>
 </div>
 </div>
@@ -688,7 +813,9 @@ We should never overwrite an existing, built-in definition or identifier (e.g. 
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">2</span></span></code></pre>
 </div>
-<p>Variables containing integer numbers are known as <code>int</code>, and those containing decimal numbers are known as <code>float</code> in Python.</p>
+<p>Variables containing integer numbers are known as <code>int</code>,
+and those containing decimal numbers are known as <code>float</code> in
+Python.</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -723,7 +850,11 @@ We should never overwrite an existing, built-in definition or identifier (e.g. 
 <pre class="output" tabindex="0"><code><span><span class="fl">16.0</span></span></code></pre>
 </div>
 <p style="text-align: justify;">
-Variables can contain characters as well; but to prevent Python from confusing them with meaningful commands, we use quotation marks. So long as we remain consistent, it doesn’t matter whether we use single or double quotations. These variables are known as <code>string</code> or <code>str</code>:
+Variables can contain characters as well; but to prevent Python from
+confusing them with meaningful commands, we use quotation marks. So long
+as we remain consistent, it doesn’t matter whether we use single or
+double quotations. These variables are known as <code>string</code> or
+<code>str</code>:
 </p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -739,22 +870,27 @@ Variables can contain characters as well; but to prevent Python from confusing t
 </h3>
 <pre class="output" tabindex="0"><code>Hi, John Doe</code></pre>
 </div>
-<div id="challenge3" class="callout challenge">
+<div id="diy:enzyme" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="diy:enzyme" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge3"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#diy:enzyme"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-Oxidised low-density lipoprotein (LDL) receptor 1 mediates the recognition, internalisation and degradation of oxidatively modified low density lipoprotein by vascular endothelial cells. Using the <a href="https://beta.uniprot.org" class="external-link">Universal Protein Resource</a> (UniProt) website, find this protein for humans, and identify:
+Oxidised low-density lipoprotein (LDL) receptor 1 mediates the
+recognition, internalisation and degradation of oxidatively modified low
+density lipoprotein by vascular endothelial cells. Using the <a href="https://beta.uniprot.org" class="external-link">Universal Protein Resource</a> (UniProt)
+website, find this protein for humans, and identify:
 </p>
 <ul><li>UniProt entry number.</li>
 <li>Length of the protein (right at the top).</li>
 <li>Gene name (right at the top).</li>
-</ul><p>Store the information you retrieved, including the protein name, in 4 separate variables.</p>
-<p>Display the values of these 4 variables in <em>one</em> line, and separate the items with 3 spaces, as follows:</p>
+</ul><p>Store the information you retrieved, including the protein name, in 4
+separate variables.</p>
+<p>Display the values of these 4 variables in <em>one</em> line, and
+separate the items with 3 spaces, as follows:</p>
 <blockquote>
 <p><code>Name   EntryNo   GeneName   Length</code></p>
 </blockquote>
@@ -792,20 +928,27 @@ Oxidised low-density lipoprotein (LDL) receptor 1 mediates the recognition, inte
 </div>
 </div>
 </div>
-<div id="challenge4" class="callout challenge">
+<div id="do-it-yourself-2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-2" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge4"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself-2"></a>
 </h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li><p>Write a script that upon execution, asks the user to enter the name of an enzyme and then retains the response in an appropriately named variable.</p></li>
-<li><p>Use the variable to display an output similar to the following:</p></li>
+<ol style="list-style-type: decimal"><li><p>Write a script that upon execution, asks the user to enter the
+name of an enzyme and then retains the response in an appropriately
+named variable.</p></li>
+<li><p>Use the variable to display an output similar to the
+following:</p></li>
 </ol><p><code>ENZYME_NAME is an enzyme.</code></p>
-<p>where <code>ENZYME_NAME</code> is the name of the enzyme entered in the prompt.</p>
-<ol start="3" style="list-style-type: decimal"><li><p>Now alter your script to ask the user to enter the number of amino acids in that enzyme. Retain the value in another appropriately named variable.</p></li>
-<li><p>Alter the output of your script to display a report in the following format:</p></li>
+<p>where <code>ENZYME_NAME</code> is the name of the enzyme entered in
+the prompt.</p>
+<ol start="3" style="list-style-type: decimal"><li><p>Now alter your script to ask the user to enter the number of
+amino acids in that enzyme. Retain the value in another appropriately
+named variable.</p></li>
+<li><p>Alter the output of your script to display a report in the
+following format:</p></li>
 </ol><p><code>ENZYME_NAME is an enzyme containing a total number of AMINO_ACIDS} amino acids.</code></p>
 <p>where <code>AMINO_ACIDS</code> is the number of amino acids.</p>
 </div>
@@ -834,74 +977,114 @@ Oxidised low-density lipoprotein (LDL) receptor 1 mediates the recognition, inte
 </div>
 <div class="section level3">
 <h3 id="sec:varTyp"><strong>Variable Types</strong><a class="anchor" aria-label="anchor" href="#sec:varTyp"></a></h3>
-<p><a href="https://docs.python.org/3/library/stdtypes.html" class="external-link"><strong>Built-in Types</strong></a></p>
-<p>When it comes to types, programming languages may be divided into two distinct categories:</p>
-<div id="checklist1" class="callout checklist">
+<p><a href="https://docs.python.org/3/library/stdtypes.html" class="external-link"><strong>Built-in
+Types</strong></a></p>
+<p>When it comes to types, programming languages may be divided into two
+distinct categories:</p>
+<div id="types" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
 <div id="types" class="callout-inner">
-<h3 class="callout-title">Types<a class="anchor" aria-label="anchor" href="#checklist1"></a>
+<h3 class="callout-title">Types<a class="anchor" aria-label="anchor" href="#types"></a>
 </h3>
 <div class="callout-content">
-<ul class="task-list"><li><p><input type="checkbox" disabled checked><strong>Statically typed</strong> language that require the programmer to define the type for every variable (statically typed).</p></li>
-<li><p><input type="checkbox" disabled checked><strong>Dynamically typed</strong> languages that define and maintain the types on the fly.</p></li>
+<ul class="task-list"><li><p><input type="checkbox" disabled checked><strong>Statically typed</strong> language that require the
+programmer to define the type for every variable (statically
+typed).</p></li>
+<li><p><input type="checkbox" disabled checked><strong>Dynamically typed</strong> languages that define
+and maintain the types on the fly.</p></li>
 </ul><p style="text-align: justify;">
-Python is a dynamically typed language. This means that, unlike statically typed languages, we rarely need to worry about the <em>type</em> definitions because in the majority of cases, Python takes care of them for us.
+Python is a dynamically typed language. This means that, unlike
+statically typed languages, we rarely need to worry about the
+<em>type</em> definitions because in the majority of cases, Python takes
+care of them for us.
 </p>
 </div>
 </div>
 </div>
-<div id="callout7" class="callout callout">
+<div id="remember-5" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-5" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout7"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-5"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-In a dynamically typed language, it is the value of a variable that determines the type. This is because the types are determined on the fly by the Python interpreter as and when it encounters different variables and values.
+In a dynamically typed language, it is the value of a variable that
+determines the type. This is because the types are determined on the fly
+by the Python interpreter as and when it encounters different variables
+and values.
 </p>
 </div>
 </div>
 </div>
-<div id="prereq3" class="callout prereq">
+<div id="advanced-topic-1" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <div id="advanced-topic-1" class="callout-inner">
-<h3 class="callout-title">Advanced Topic<a class="anchor" aria-label="anchor" href="#prereq3"></a>
+<h3 class="callout-title">Advanced Topic<a class="anchor" aria-label="anchor" href="#advanced-topic-1"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-In computer programming, type systems are syntactic methods to enforce and / or identify levels of abstraction. An entire field in computer science has been dedicated to the study of programming languages from a type–theoretic approach. This is primarily due to the implication of types and their underlying principles in such areas in software engineering as optimisation and security. To learn more about the study of type systems, refer to: Pierce B. Types and programming languages. Cambridge, Mass.: MIT Press; 2002.
+In computer programming, type systems are syntactic methods to enforce
+and / or identify levels of abstraction. An entire field in computer
+science has been dedicated to the study of programming languages from a
+type–theoretic approach. This is primarily due to the implication of
+types and their underlying principles in such areas in software
+engineering as optimisation and security. To learn more about the study
+of type systems, refer to: Pierce B. Types and programming languages.
+Cambridge, Mass.: MIT Press; 2002.
 </p>
 </div>
 </div>
 </div>
-<div id="callout8" class="callout callout">
+<div id="note-2" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="note-2" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#callout8"></a>
+<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-2"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-The values determine the type of a variable in dynamically typed languages. This is in contrast with statically typed languages where a variable must be initialised using a specific type before a value — whose type is consistent with the initialised variable, can be assigned to it.
+The values determine the type of a variable in dynamically typed
+languages. This is in contrast with statically typed languages where a
+variable must be initialised using a specific type before a value —
+whose type is consistent with the initialised variable, can be assigned
+to it.
 </p>
 </div>
 </div>
 </div>
 <div class="section level4">
-<h4 id="why-learn-about-types-in-a-dynamically-typed-programming-language"><strong>Why learn about <em>types</em> in a dynamically typed programming language?</strong><a class="anchor" aria-label="anchor" href="#why-learn-about-types-in-a-dynamically-typed-programming-language"></a></h4>
+<h4 id="why-learn-about-types-in-a-dynamically-typed-programming-language"><strong>Why learn about <em>types</em> in a dynamically typed
+programming language?</strong><a class="anchor" aria-label="anchor" href="#why-learn-about-types-in-a-dynamically-typed-programming-language"></a></h4>
 <p style="text-align: justify;">
 </p>
 <p style="text-align: justify;">
-Python enjoys a powerful type system out of the box. Table <a href="#tb:types:nativeTypes">Built-in types in Python</a> provides a comprehensive reference for the built-in types in Python. Built-in types are the types that exist in the language and do not require any third party libraries to implement or use.
+Python enjoys a powerful type system out of the box. Table <a href="#tb:types:nativeTypes">Built-in types in Python</a> provides a
+comprehensive reference for the built-in types in Python. Built-in types
+are the types that exist in the language and do not require any third
+party libraries to implement or use.
 </p>
-<figure><img src="../fig/python_built-in_types.png" id="tb:types:nativeTypes" alt="" class="figure mx-auto d-block"><figcaption>A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br><sup>*</sup> Not discussed in this course — included for reference only. <br><sup>$</sup><code>dict</code> is not an iterable by default, however, it is possible to iterate through its keys. <br><br><strong>Mutability</strong> is an important <a href="https://en.wikipedia.org/wiki/Immutable_object" class="external-link">concept in programming</a>. A mutable object is an object whose value(s) may be altered. This will become clearer once we study <code>list</code> and <code>tuple</code>. Find out more about mutability in Python from the <a href="https://docs.python.org/3.9/reference/datamodel.html" class="external-link">documentations}</a>. <br><br><strong>Complex numbers</strong> refer to a <a href="http://thinkzone.wlonk.com/Numbers/NumberSets.htm" class="external-link">set of numbers</a> that have a real part, and an imaginary part; where the imaginary part is defined as <span class="math inline">\(\sqrt{-1}\)</span>. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this <a href="https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro" class="external-link">Khan Academy video tutorial</a>.</figcaption></figure><p>Sometimes we might need want to know what is the type of a variable. To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
+<figure><img src="../fig/python_built-in_types.png" id="tb:types:nativeTypes" alt="" class="figure mx-auto d-block"><figcaption>A comprehensive (but non-exhaustive) reference of
+built-in (native) types in Python 3.<br><sup>*</sup> Not discussed in
+this course — included for reference only. <br><sup>$</sup><code>dict</code> is not an iterable by default, however, it is possible
+to iterate through its keys. <br><br><strong>Mutability</strong> is an
+important <a href="https://en.wikipedia.org/wiki/Immutable_object" class="external-link">concept in
+programming</a>. A mutable object is an object whose value(s) may be
+altered. This will become clearer once we study <code>list</code> and
+<code>tuple</code>. Find out more about mutability in Python from the <a href="https://docs.python.org/3.9/reference/datamodel.html" class="external-link">documentations}</a>.
+<br><br><strong>Complex numbers</strong> refer to a <a href="http://thinkzone.wlonk.com/Numbers/NumberSets.htm" class="external-link">set of
+numbers</a> that have a real part, and an imaginary part; where the
+imaginary part is defined as <span class="math inline">\(\sqrt{-1}\)</span>. These numbers are very useful
+in the study of oscillatory behaviours and flow (e.g. heat, fluid,
+electricity). To learn more about complex numbers, watch this <a href="https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro" class="external-link">Khan
+Academy video tutorial</a>.</figcaption></figure><p>Sometimes we might need want to know what is the type of a variable.
+To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -962,26 +1145,29 @@ Python enjoys a powerful type system out of the box. Table <a href="#tb:types:na
 </h3>
 <pre class="output" tabindex="0"><code>&lt;class 'str'&gt;</code></pre>
 </div>
-<div id="callout9" class="callout callout">
+<div id="remember-6" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-6" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout9"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-6"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-In Python, a variable / value of a certain type may be referred to as an <em>instance</em> of that type. For instance, an integer value whose type in Python is defined as <em>int</em> is said to be an <strong>instance of type</strong> <code>int</code>.
+In Python, a variable / value of a certain type may be referred to as an
+<em>instance</em> of that type. For instance, an integer value whose
+type in Python is defined as <em>int</em> is said to be an
+<strong>instance of type</strong> <code>int</code>.
 </p>
 </div>
 </div>
 </div>
-<div id="challenge5" class="callout challenge">
+<div id="do-it-yourself-3" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-3" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge5"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself-3"></a>
 </h3>
 <div class="callout-content">
 <p>Determine and display the type for each of these values:</p>
@@ -993,7 +1179,8 @@ In Python, a variable / value of a certain type may be referred to as an <em>ins
 <li>.5 - 1</li>
 <li>1.3e-5</li>
 <li>3e5</li>
-</ul><p>The result for each value should be represented in the following format:</p>
+</ul><p>The result for each value should be represented in the following
+format:</p>
 <p><code>Value X is an instance of &lt;class 'Y'&gt;</code></p>
 </div>
 </div>
@@ -1128,43 +1315,61 @@ In Python, a variable / value of a certain type may be referred to as an <em>ins
 </div>
 <div class="section level3">
 <h3 id="sec:conversionType"><strong>Conversion of types</strong><a class="anchor" aria-label="anchor" href="#sec:conversionType"></a></h3>
-<div id="discussion3" class="callout discussion">
+<div id="why-convert-types" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="why-convert-types" class="callout-inner">
-<h3 class="callout-title">Why convert types?<a class="anchor" aria-label="anchor" href="#discussion3"></a>
+<h3 class="callout-title">Why convert types?<a class="anchor" aria-label="anchor" href="#why-convert-types"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-It is sometimes necessary to have the values returned by the <kbd>input()</kbd> function — <em>i.e</em>. the user’s response, in other types. Imagine the following scenario:
+It is sometimes necessary to have the values returned by the
+<kbd>input()</kbd> function — <em>i.e</em>. the user’s response, in
+other types. Imagine the following scenario:
 </p>
 <p style="text-align: justify;">
-<span style="color: rgb(32, 121, 77);"> “We ask our user to enter the total volume of their purified protein, so that we can work out the amount of assay they need to conduct a specific experiment. To calculate this assay volume using the volume of the purified protein, we need to perform mathematical calculations based on the response we receive from our user. It is not possible to perform mathematical operations on non-numeric values. Therefore, we ought to somehow convert the type from <code>str</code> to a numeric type.” </span>
+<span style="color: rgb(32, 121, 77);"> “We ask our user to enter the
+total volume of their purified protein, so that we can work out the
+amount of assay they need to conduct a specific experiment. To calculate
+this assay volume using the volume of the purified protein, we need to
+perform mathematical calculations based on the response we receive from
+our user. It is not possible to perform mathematical operations on
+non-numeric values. Therefore, we ought to somehow convert the type from
+<code>str</code> to a numeric type.” </span>
 </p>
 <p style="text-align: justify;">
-The possibility of converting from one type to another depends entirely on the <em>value</em>, the <em>source type</em>, and the <em>target type</em>. For instance; we can convert an instance of type <code>str</code> (source type) to one of type <code>int</code> (target type) if and only if the source value consists entirely of numbers and there are <em>no</em> other characters.
+The possibility of converting from one type to another depends entirely
+on the <em>value</em>, the <em>source type</em>, and the <em>target
+type</em>. For instance; we can convert an instance of type
+<code>str</code> (source type) to one of type <code>int</code> (target
+type) if and only if the source value consists entirely of numbers and
+there are <em>no</em> other characters.
 </p>
 </div>
 </div>
 </div>
-<div id="callout10" class="callout callout">
+<div id="remember-7" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-7" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout10"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-7"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-To convert a variable from one type to another, we use the <em>Type Name</em> of the target type (as described in Table <a href="#tb:types:nativeTypes">Built-in types in Python</a> and treat it as a function.
+To convert a variable from one type to another, we use the <em>Type
+Name</em> of the target type (as described in Table <a href="#tb:types:nativeTypes">Built-in types in Python</a> and treat it
+as a function.
 </p>
 <p>For instance, to convert a variable to integer, we:</p>
 <ul><li>look up the <em>Type Name</em> for integer from Table <a href="#tb:types:nativeTypes">Built-in types in Python</a>
 </li>
-<li>then treat the <em>Type Name</em> as a function: <code>int()</code>
+<li>then treat the <em>Type Name</em> as a function:
+<code>int()</code>
 </li>
-<li>use the function to convert our variable: new_var = <code>int</code>(old_var)</li>
+<li>use the function to convert our variable: new_var =
+<code>int</code>(old_var)</li>
 </ul></div>
 </div>
 </div>
@@ -1193,7 +1398,8 @@ To convert a variable from one type to another, we use the <em>Type Name</em> of
 </h3>
 <pre class="output" tabindex="0"><code>12 &lt;class 'int'&gt;</code></pre>
 </div>
-<p>If we attempt to convert a variable that contains non-numeric values, a <code>ValueError</code> is raised:</p>
+<p>If we attempt to convert a variable that contains non-numeric values,
+a <code>ValueError</code> is raised:</p>
 <div class="codewrapper sourceCode" id="cb61">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1214,21 +1420,20 @@ To convert a variable from one type to another, we use the <em>Type Name</em> of
 <div class="codewrapper">
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error in py_call_impl(callable, dots$args, dots$keywords): ValueError: invalid literal for int() with base 10: '12y'
-
-Detailed traceback:
-  File "&lt;string&gt;", line 1, in &lt;module&gt;</code></pre>
+<pre class="error" tabindex="0"><code>Error: ValueError: invalid literal for int() with base 10: '12y'</code></pre>
 </div>
-<div id="challenge6" class="callout challenge">
+<div id="do-it-yourself-4" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-4" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge6"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself-4"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-In programming, we routinely face errors resulting from different mistakes. The process of finding and correcting such mistakes in the code is referred to as <em>debugging</em>.
+In programming, we routinely face errors resulting from different
+mistakes. The process of finding and correcting such mistakes in the
+code is referred to as <em>debugging</em>.
 </p>
 <p>We have been given the following snippet written in Python 3:</p>
 <pre><code><span><span class="va">value_a</span> <span class="op">=</span> <span class="fl">3</span></span>
@@ -1236,7 +1441,8 @@ In programming, we routinely face errors resulting from different mistakes. The 
 <span>      </span>
 <span><span class="va">result</span> <span class="op">=</span> <span class="va">value_a</span> <span class="op">+</span> <span class="va">value_b</span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="va">value_a</span>, <span class="st">'+'</span>, <span class="va">value_b</span>, <span class="st">'='</span>, <span class="va">result</span><span class="op">)</span></span></code></pre>
-<p>but when the code is executed, we encounter an error message as follows:</p>
+<p>but when the code is executed, we encounter an error message as
+follows:</p>
 <pre><code>Traceback (most recent call last):
 File "&lt;stdin&gt;", line 1, in &lt;module&gt;
 TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
@@ -1288,26 +1494,34 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-When we use <kbd>input()</kbd> to obtain a value from the user, the results are by default an instance of type <code>str</code>. An <kbd>input()</kbd> function always stores the response as a <code>str</code> value, no matter what the user enters. However, it is possible to convert the type afterwards.
+When we use <kbd>input()</kbd> to obtain a value from the user, the
+results are by default an instance of type <code>str</code>. An
+<kbd>input()</kbd> function always stores the response as a
+<code>str</code> value, no matter what the user enters. However, it is
+possible to convert the type afterwards.
 </p>
 </div>
 </div>
 </div>
-<div id="callout11" class="callout callout">
+<div id="remember-8" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-8" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout11"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-8"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-The <kbd>input()</kbd> function <em>always</em> returns a value of type <code>str</code> regardless of the user’s response. In other words, if a user’s response to an <kbd>input()</kbd> request is numeric, Python will <em>not</em> automatically recognise it as a numeric type.
+The <kbd>input()</kbd> function <em>always</em> returns a value of type
+<code>str</code> regardless of the user’s response. In other words, if a
+user’s response to an <kbd>input()</kbd> request is numeric, Python will
+<em>not</em> automatically recognise it as a numeric type.
 </p>
 </div>
 </div>
 </div>
-<p>We may use <em>type conversion</em> in conjunction with the values returned by the <kbd>input()</kbd> function:</p>
+<p>We may use <em>type conversion</em> in conjunction with the values
+returned by the <kbd>input()</kbd> function:</p>
 <pre><code><span><span class="va">response</span> <span class="op">=</span> <span class="fu">input</span><span class="op">(</span><span class="st">'Please enter a numeric value: '</span><span class="op">)</span></span>
 <span>    </span>
 <span><span class="va">response_numeric</span> <span class="op">=</span> <span class="fu">float</span><span class="op">(</span><span class="va">response</span><span class="op">)</span></span>
@@ -1319,26 +1533,30 @@ The <kbd>input()</kbd> function <em>always</em> returns a value of type <code>st
 <p style="text-align: justify;">
 The output shows the results when we enter numeric values as directed.
 </p>
-<div id="challenge7" class="callout challenge">
+<div id="do-it-yourself-5" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-5" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge7"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself-5"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-We know that each amino acid in a protein is encoded by a triplet of mRNA nucleotides.
+We know that each amino acid in a protein is encoded by a triplet of
+mRNA nucleotides.
 </p>
 <p style="text-align: justify;">
-With that in mind, alter the script you wrote for <a href="#diy:enzyme">Do it Yourself</a> and use the number of amino acids entered by the user to calculate the number of mRNA nucleotides.
+With that in mind, alter the script you wrote for <a href="#diy:enzyme">Do it Yourself</a> and use the number of amino acids
+entered by the user to calculate the number of mRNA nucleotides.
 </p>
 <p>Display the results in the following format:</p>
 <blockquote>
 <p><code>ENZYME_NAME is an enzyme with AMINO_ACIDS amino acids and NUCLEOTIDES nucleotides.</code></p>
 </blockquote>
-<p>where <code>NUCLEOTIDES</code> is the total number of mRNA nucleotides that you calculated.</p>
-<p><strong>Note:</strong> Multiplication is represented using the asterisk (<code>*</code>) sign.</p>
+<p>where <code>NUCLEOTIDES</code> is the total number of mRNA
+nucleotides that you calculated.</p>
+<p><strong>Note:</strong> Multiplication is represented using the
+asterisk (<code>*</code>) sign.</p>
 </div>
 </div>
 </div>
@@ -1363,49 +1581,101 @@ With that in mind, alter the script you wrote for <a href="#diy:enzyme">Do it Yo
 </div>
 </div>
 </div>
-<figure id="variable-scopes"><h3><strong>Variable scopes</strong></h3>
-<a href="https://docs.python.org/3.6/reference/executionmodel.html#resolution-of-names" class="external-link"><strong>Resolution of names</strong></a>
+<div class="section level3">
+<h3 id="variable-scopes"><strong>Variable scopes</strong><a class="anchor" aria-label="anchor" href="#variable-scopes"></a></h3>
+<a href="https://docs.python.org/3.6/reference/executionmodel.html#resolution-of-names" class="external-link"><strong>Resolution
+of names</strong></a>
 <p style="text-align: justify;">
-When defining a variable, we should always consider where in our programme we intent to use it. The more localised our variables, the better. This is because local variables are easier to distinguish, and thus reduce the chance of making mistakes — e.g. unintentionally redefine or alter the value of an existing variable.
+When defining a variable, we should always consider where in our
+programme we intent to use it. The more localised our variables, the
+better. This is because local variables are easier to distinguish, and
+thus reduce the chance of making mistakes — e.g. unintentionally
+redefine or alter the value of an existing variable.
 </p>
 <p style="text-align: justify;">
-To that end, the scope of a variable defines the ability to reference a variable from different <em>points</em> in our programmes. The concept of local variables becomes clearer once we explore functions in programming in chapter <a href="06-functions.html">Functions</a>.
+To that end, the scope of a variable defines the ability to reference a
+variable from different <em>points</em> in our programmes. The concept
+of local variables becomes clearer once we explore functions in
+programming in chapter <a href="06-functions.html">Functions</a>.
 </p>
 <p style="text-align: justify;">
-As displayed in Figure <a href="#fig:opts:scopes">Variable scopes</a>, the point <em>at</em> or <em>from</em> which a variable can be referenced depends on the location where the variable is defined.
+As displayed in Figure <a href="#fig:opts:scopes">Variable scopes</a>,
+the point <em>at</em> or <em>from</em> which a variable can be
+referenced depends on the location where the variable is defined.
 </p>
-<p>In essence, there are three general rules to remember in relation variable scopes in Python:</p>
+<p>In essence, there are three general rules to remember in relation
+variable scopes in Python:</p>
 <p style="text-align: justify;">
-I. A variable that is defined in the outer scope, can be <em>accessed</em> or <em>called</em> in the inner scopes, but it cannot be <em>altered</em> implicitly. Not that such variables may still be altered using special techniques (not discussed).
+I. A variable that is defined in the outer scope, can be
+<em>accessed</em> or <em>called</em> in the inner scopes, but it cannot
+be <em>altered</em> implicitly. Not that such variables may still be
+altered using special techniques (not discussed).
 </p>
 <p style="text-align: justify;">
 </p>
-<ol start="2" style="list-style-type: upper-roman"><li>A variable that is defined in the innermost scopes (local), can only be <em>accessed</em>, <em>called</em>, or <em>altered</em> within the boundaries of the scope it is defined in.</li>
+<ol start="2" style="list-style-type: upper-roman"><li>A variable that is defined in the innermost scopes (local), can only
+be <em>accessed</em>, <em>called</em>, or <em>altered</em> within the
+boundaries of the scope it is defined in.</li>
 </ol><p style="text-align: justify;">
 </p>
-<ol start="3" style="list-style-type: upper-roman"><li>The inner scopes <em>from</em> which a variable is referenced must themselves have be contained within the defining scope — e.g. in <code>FuncB</code> of Figure <a href="#fig:opts:scopes">Variable scopes</a>, we can reference <code>a</code>, <code>b</code>, and <code>x</code>; but not <code>f1</code>. This is because the scope of <code>f1</code> is <code>Script</code> <kbd>→</kbd> <code>FuncA</code>, so it can only be referenced from <code>Script</code> <kbd>→</kbd> <code>FuncA</code> <kbd>→ …</kbd>, but not `<code>Script</code><kbd>→ …</kbd> or <code>Script</code> <kbd>→</kbd> <code>FuncB</code> <kbd>→ …</kbd>.</li>
-</ol><img src="../fig/variable_scopes.png" title="fig:" id="fig:opts:scopes" alt="Variable scopes in Python with respect to scripts and functions." class="figure mx-auto d-block"><p style="text-align: justify;">
-Python is an interpreted language. This means that the Python interpreter goes through the codes that we write line by line, interpreting it to machine language. It is only then that the commands are processed and executed by the computer. On that account, a variable (or a function) can be referenced only <em>after</em> its initial definition. That is why, for instance, in <code>Script (part 2)</code> of Figure <a href="#fig:opts:scopes">Variable scopes</a>, we can reference every variable and function except for <code>FuncC</code>, which is declared further down the code hierarchy.
+<ol start="3" style="list-style-type: upper-roman"><li>The inner scopes <em>from</em> which a variable is referenced must
+themselves have be contained within the defining scope — e.g. in
+<code>FuncB</code> of Figure <a href="#fig:opts:scopes">Variable
+scopes</a>, we can reference <code>a</code>, <code>b</code>, and
+<code>x</code>; but not <code>f1</code>. This is because the scope of
+<code>f1</code> is <code>Script</code> <kbd>→</kbd> <code>FuncA</code>,
+so it can only be referenced from <code>Script</code> <kbd>→</kbd>
+<code>FuncA</code> <kbd>→ …</kbd>, but not `<code>Script</code><kbd>→
+…</kbd> or <code>Script</code> <kbd>→</kbd> <code>FuncB</code> <kbd>→
+…</kbd>.</li>
+</ol><figure><img src="../fig/variable_scopes.png" id="fig:opts:scopes" alt="" class="figure mx-auto d-block"><figcaption>Variable scopes in Python with respect to scripts and
+functions.</figcaption></figure><p style="text-align: justify;">
+Python is an interpreted language. This means that the Python
+interpreter goes through the codes that we write line by line,
+interpreting it to machine language. It is only then that the commands
+are processed and executed by the computer. On that account, a variable
+(or a function) can be referenced only <em>after</em> its initial
+definition. That is why, for instance, in <code>Script (part 2)</code>
+of Figure <a href="#fig:opts:scopes">Variable scopes</a>, we can
+reference every variable and function except for <code>FuncC</code>,
+which is declared further down the code hierarchy.
 </p>
 <p style="text-align: justify;">
-Although scope and hierarchy appear at first glance as theoretical concepts in programming, their implications are entirely practical. The definition of these principles vary from one programming language to another. As such, it is essential to understand these principles and their implications in relation to any programming language we are trying to learn.
+Although scope and hierarchy appear at first glance as theoretical
+concepts in programming, their implications are entirely practical. The
+definition of these principles vary from one programming language to
+another. As such, it is essential to understand these principles and
+their implications in relation to any programming language we are trying
+to learn.
 </p>
-</figure><div class="section level3">
+</div>
+<div class="section level3">
 <h3 id="terminal"><strong>Optional: How to use terminal environment?</strong><a class="anchor" aria-label="anchor" href="#terminal"></a></h3>
-<figure><img src="../fig/commandprompt_1.png" class="figure mx-auto d-block"><img src="../fig/commandprompt_2.png" class="figure mx-auto d-block"><img src="../fig/commandprompt_3.png" class="figure mx-auto d-block"></figure></div>
+<p><img src="../fig/commandprompt_1.png" class="figure"><img src="../fig/commandprompt_2.png" class="figure"><img src="../fig/commandprompt_3.png" class="figure"></p>
+</div>
 </section><section id="sec:operations"><h2 class="section-heading">Operations<a class="anchor" aria-label="anchor" href="#sec:operations"></a>
 </h2>
 <hr class="half-width"><p style="text-align: justify;">
-Through our experimentations with <a href="#sec:varTyp">variable types</a>, we already know that variables may be subject to different operations.
+Through our experimentations with <a href="#sec:varTyp">variable
+types</a>, we already know that variables may be subject to different
+operations.
 </p>
 <p style="text-align: justify;">
-When assessing <a href="#sec:conversionType">type conversions</a> we also established that the operations we can apply to each variable depend on the <em>type</em> of that variable. To that end, we learned that although it is sometimes possible to mix variables from different types to perform an operation — e.g. multiplying a floating point number with an integer, there are some logical restrictions in place.
+When assessing <a href="#sec:conversionType">type conversions</a> we
+also established that the operations we can apply to each variable
+depend on the <em>type</em> of that variable. To that end, we learned
+that although it is sometimes possible to mix variables from different
+types to perform an operation — e.g. multiplying a floating point number
+with an integer, there are some logical restrictions in place.
 </p>
 <p style="text-align: justify;">
-Throughout this section, we will take a closer look into different types of operations in Python. This will allow us to gain a deeper insight into the concept and familiarise ourselves with the underlying logic.
+Throughout this section, we will take a closer look into different types
+of operations in Python. This will allow us to gain a deeper insight
+into the concept and familiarise ourselves with the underlying logic.
 </p>
 <p style="text-align: justify;">
-To recapitulate on what we have done so far, we start off by reviewing <em>additions</em> — the most basic of all operations.
+To recapitulate on what we have done so far, we start off by reviewing
+<em>additions</em> — the most basic of all operations.
 </p>
 <p>Give the variable <code>total_items</code>:</p>
 <div class="codewrapper sourceCode" id="cb71">
@@ -1420,7 +1690,8 @@ To recapitulate on what we have done so far, we start off by reviewing <em>addit
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">2</span></span></code></pre>
 </div>
-<p>We can increment the value of an <em>existing</em> variable by <code>1</code> as follows:</p>
+<p>We can increment the value of an <em>existing</em> variable by
+<code>1</code> as follows:</p>
 <div class="codewrapper sourceCode" id="cb73">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1434,7 +1705,10 @@ To recapitulate on what we have done so far, we start off by reviewing <em>addit
 <pre class="output" tabindex="0"><code><span><span class="fl">3</span></span></code></pre>
 </div>
 <p style="text-align: justify;">
-Given 2 different variables, each containing a different value; we can perform an operation on these values and store the result in <em>another</em> variable without altering the original variables in any way:
+Given 2 different variables, each containing a different value; we can
+perform an operation on these values and store the result in
+<em>another</em> variable without altering the original variables in any
+way:
 </p>
 <div class="codewrapper sourceCode" id="cb75">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1452,7 +1726,8 @@ Given 2 different variables, each containing a different value; we can perform a
 <pre class="output" tabindex="0"><code><span><span class="fl">7</span></span></code></pre>
 </div>
 <p style="text-align: justify;">
-We can change the value of an <em>existing</em> variable using the value stored in <em>another</em> variable:
+We can change the value of an <em>existing</em> variable using the value
+stored in <em>another</em> variable:
 </p>
 <div class="codewrapper sourceCode" id="cb77">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1467,7 +1742,8 @@ We can change the value of an <em>existing</em> variable using the value stored 
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">12</span></span></code></pre>
 </div>
-<p>There is also a shorthand method for applying the operation on an <em>existing</em> variable:</p>
+<p>There is also a shorthand method for applying the operation on an
+<em>existing</em> variable:</p>
 <div class="codewrapper sourceCode" id="cb79">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1506,74 +1782,103 @@ We can change the value of an <em>existing</em> variable using the value stored 
 <pre class="output" tabindex="0"><code><span><span class="fl">8</span></span></code></pre>
 </div>
 <p style="text-align: justify;">
-As highlighted in the <a href="#sec:operations">introduction</a>, different operations may be applied to any variable or value. Throughout the rest of this section, we will explore the most fundamental operations in programming, and learn about their implementation in Python.
+As highlighted in the <a href="#sec:operations">introduction</a>,
+different operations may be applied to any variable or value. Throughout
+the rest of this section, we will explore the most fundamental
+operations in programming, and learn about their implementation in
+Python.
 </p>
-<div id="callout12" class="callout callout">
+<div id="remember-9" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-9" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout12"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-9"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-There are 2 very general categories of operations in programming: <em>mathematical</em>, and <em>logical</em>. Naturally, we use mathematical operations to perform calculations, and logical operations to perform tests.
+There are 2 very general categories of operations in programming:
+<em>mathematical</em>, and <em>logical</em>. Naturally, we use
+mathematical operations to perform calculations, and logical operations
+to perform tests.
 </p>
 </div>
 </div>
 </div>
 <div class="section level3">
 <h3 id="math_ops"><strong>Mathematical Operations</strong><a class="anchor" aria-label="anchor" href="#math_ops"></a></h3>
-<p>Suppose <code>a</code> and <code>b</code> are 2 variables representing integer numbers as follows:</p>
+<p>Suppose <code>a</code> and <code>b</code> are 2 variables
+representing integer numbers as follows:</p>
 <pre><code><span><span class="va">a</span> <span class="op">=</span> <span class="fl">17</span></span>
 <span><span class="va">b</span> <span class="op">=</span> <span class="fl">5</span></span></code></pre>
-<p>Using <code>a</code> and <code>b</code> we can itemise built-in mathematical operations in Python as follows:</p>
-<figure><img src="../fig/routine_operations.png" id="fig:nativeTypes" alt="" class="figure mx-auto d-block"><figcaption>Routine mathematical operations in Python</figcaption></figure><div id="callout13" class="callout callout">
+<p>Using <code>a</code> and <code>b</code> we can itemise built-in
+mathematical operations in Python as follows:</p>
+<figure><img src="../fig/routine_operations.png" id="fig:nativeTypes" alt="" class="figure mx-auto d-block"><figcaption>Routine mathematical operations in Python</figcaption></figure><div id="remember-10" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-10" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout13"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-10"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-As far as mathematical operations are concerned, variables <code>a</code> and <code>b</code> may be an instance of any <em>numeric</em> type. See Table <a href="#fig:nativeTypes">Routine mathematical operations in Python</a> to find out more about numeric types in Python.
+As far as mathematical operations are concerned, variables
+<code>a</code> and <code>b</code> may be an instance of any
+<em>numeric</em> type. See Table <a href="#fig:nativeTypes">Routine
+mathematical operations in Python</a> to find out more about numeric
+types in Python.
 </p>
-<p>Values of type <code>int</code> have been chosen in our examples to facilitate the understanding of the results.</p>
+<p>Values of type <code>int</code> have been chosen in our examples to
+facilitate the understanding of the results.</p>
 </div>
 </div>
 </div>
-<div id="challenge8" class="callout challenge">
+<div id="diy:mathsI" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="diy:mathsI" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge8"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#diy:mathsI"></a>
 </h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Calculate the following and store the results in appropriately named variables:</li>
+<ol style="list-style-type: decimal"><li>Calculate the following and store the results in appropriately named
+variables:</li>
 </ol><ol style="list-style-type: lower-alpha"><li><span class="math inline">\(5.8 \times 3.3\)</span></li>
 <li><span class="math inline">\(\frac{180}{6}\)</span></li>
 <li><span class="math inline">\(35 - 3.0\)</span></li>
 <li><span class="math inline">\(35 - 3\)</span></li>
 <li><span class="math inline">\(2^{1000}\)</span></li>
-</ol><p>Display the result of each calculation – including the type, in the following format:</p>
+</ol><p>Display the result of each calculation – including the type, in the
+following format:</p>
 <blockquote>
 <p><code>Result: X is an instance of &lt;class 'Y'&gt;</code></p>
 </blockquote>
 <ol start="2" style="list-style-type: decimal"><li>Now using the results you obtained:
 <p style="text-align: justify;">
-<strong>I.</strong> Can you explain why is the result of <span class="math inline">\(35 - 3.0\)</span> is an instance of type <code>float</code>, whilst that of <span class="math inline">\(35 - 3\)</span> is of type <code>int</code>?
+<strong>I.</strong> Can you explain why is the result of <span class="math inline">\(35 - 3.0\)</span> is an instance of type
+<code>float</code>, whilst that of <span class="math inline">\(35 -
+3\)</span> is of type <code>int</code>?
 </p>
 </li>
 </ol><p style="text-align: justify;">
-<strong>II.</strong> Unlike the numeric types, string values have a length. To obtain the length of a string value, we use <kbd>len()</kbd>. Convert the result for <span class="math inline">\(2^{1000}\)</span> from <code>int</code> to <code>str</code>, then use the aforementioned function to work out the length of the number — i.e. how many digits is it made of?
+<strong>II.</strong> Unlike the numeric types, string values have a
+length. To obtain the length of a string value, we use <kbd>len()</kbd>.
+Convert the result for <span class="math inline">\(2^{1000}\)</span>
+from <code>int</code> to <code>str</code>, then use the aforementioned
+function to work out the length of the number — i.e. how many digits is
+it made of?
 </p>
 <p style="text-align: justify;">
-If you feel adventurous, you can try this for <span class="math inline">\(2^{10000}\)</span> or higher; but beware that you might overwhelm your computer and need a restart it if you go too far (i.e. above <span class="math inline">\(2^{1000000}\)</span>). Just make sure you save everything beforehand, so you don’t accidentally step on your own foot.}
+If you feel adventurous, you can try this for <span class="math inline">\(2^{10000}\)</span> or higher; but beware that you
+might overwhelm your computer and need a restart it if you go too far
+(i.e. above <span class="math inline">\(2^{1000000}\)</span>). Just make
+sure you save everything beforehand, so you don’t accidentally step on
+your own foot.}
 </p>
 <p style="text-align: justify;">
-<strong>Hint:</strong> We discuss <kbd>len()</kbd> in <a href="04-arrays.html">subsection of arrays</a>. However, at this point, you should be able to use the official documentations and StackOverflow to work out how it works.
+<strong>Hint:</strong> We discuss <kbd>len()</kbd> in <a href="04-arrays.html">subsection of arrays</a>. However, at this point,
+you should be able to use the official documentations and StackOverflow
+to work out how it works.
 </p>
 </div>
 </div>
@@ -1660,7 +1965,10 @@ If you feel adventurous, you can try this for <span class="math inline">\(2^{100
 <div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
 <div class="accordion-body">
 <p style="text-align: justify;">
-In the case of <span class="math inline">\(35 - 3.0\)</span> vs <span class="math inline">\(35 - 3\)</span>, the former includes a floating point number. Operations involving multiple numeric types always produce the results as an instance of the type that covers all of the operands – i.e. <code>float</code> covers <code>int</code>, but not vice-versa.
+In the case of <span class="math inline">\(35 - 3.0\)</span> vs <span class="math inline">\(35 - 3\)</span>, the former includes a floating
+point number. Operations involving multiple numeric types always produce
+the results as an instance of the type that covers all of the operands –
+i.e. <code>float</code> covers <code>int</code>, but not vice-versa.
 </p>
 </div>
 </div>
@@ -1693,16 +2001,19 @@ In the case of <span class="math inline">\(35 - 3.0\)</span> vs <span class="mat
 </div>
 </div>
 </div>
-<div id="callout14" class="callout callout">
+<div id="interesting-fact" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="interesting-fact" class="callout-inner">
-<h3 class="callout-title">Interesting Fact<a class="anchor" aria-label="anchor" href="#callout14"></a>
+<h3 class="callout-title">Interesting Fact<a class="anchor" aria-label="anchor" href="#interesting-fact"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-As of Python 3.6, you can use an underscores (<code>_</code>) <em>within</em> large numbers as a separator to make them easier to read in your code. For instance, instead of <code>x = 1000000</code>, you can write <code>x = 1_000_000</code>.
+As of Python 3.6, you can use an underscores (<code>_</code>)
+<em>within</em> large numbers as a separator to make them easier to read
+in your code. For instance, instead of <code>x = 1000000</code>, you can
+write <code>x = 1_000_000</code>.
 </p>
 </div>
 </div>
@@ -1710,10 +2021,16 @@ As of Python 3.6, you can use an underscores (<code>_</code>) <em>within</em> la
 <div class="section level4">
 <h4 id="shorthands"><strong>Shorthands</strong><a class="anchor" aria-label="anchor" href="#shorthands"></a></h4>
 <p style="text-align: justify;">
-When it comes to mathematical operations in Python, there is a frequently used shorthand method that every Python programmer should be familiar with.
+When it comes to mathematical operations in Python, there is a
+frequently used shorthand method that every Python programmer should be
+familiar with.
 </p>
 <p style="text-align: justify;">
-Suppose we have a variable defined as <code>total_residues = 52</code> and want to perform a mathematical operation on it. However, we would like to store the result of that operation in <code>total_residues</code> instead of a new variable. In such cases, we can do as follows:
+Suppose we have a variable defined as <code>total_residues = 52</code>
+and want to perform a mathematical operation on it. However, we would
+like to store the result of that operation in
+<code>total_residues</code> instead of a new variable. In such cases, we
+can do as follows:
 </p>
 <div class="codewrapper sourceCode" id="cb98">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1837,34 +2154,47 @@ Suppose we have a variable defined as <code>total_residues = 52</code> and want 
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">84</span></span></code></pre>
 </div>
-<div id="challenge9" class="callout challenge">
+<div id="diy:mathsII" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="diy:mathsII" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge9"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#diy:mathsII"></a>
 </h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Given:
-<ul><li>Circumference: <span class="math inline">\(C = 18.84956\)</span>
+<ul><li>Circumference: <span class="math inline">\(C =
+18.84956\)</span>
 </li>
 <li>Radius: <span class="math inline">\(R = 3\)</span>
 </li>
 </ul></li>
-</ol><p>and considering that the properties of a circle are defined as follows:</p>
-<p><span class="math display">\[\pi = \frac{C}{D}\]</span> calculate <span class="math inline">\(\pi\)</span> using the above equation and store it in a variable named <code>pi</code>:</p>
-<figure><img src="../fig/circle.png" class="figure mx-auto d-block"></figure><p>Then round the results to 5 decimal places and display the result in the following format:</p>
+</ol><p>and considering that the properties of a circle are defined as
+follows:</p>
+<p><span class="math display">\[\pi = \frac{C}{D}\]</span> calculate
+<span class="math inline">\(\pi\)</span> using the above equation and
+store it in a variable named <code>pi</code>:</p>
+<figure><img src="../fig/circle.png" class="figure mx-auto d-block"></figure><p>Then round the results to 5 decimal places and display the result in
+the following format:</p>
 <blockquote>
 <p><code>The value of pi calculated to 5 decimal places: X.XXXXX</code></p>
 </blockquote>
 <p style="text-align: justify;">
-<strong>Note: </strong>To round floating point numbers in Python, we use <kbd>round()</kbd>. This is a built-in function that takes 2 input arguments: the first is the variable/value to be rounded, and the second is the number decimal places. Read more about <kbd>round()</kbd> in the <a href="https://docs.python.org/3/library/functions.html#round" class="external-link">official documentations</a>.
+<strong>Note: </strong>To round floating point numbers in Python, we use
+<kbd>round()</kbd>. This is a built-in function that takes 2 input
+arguments: the first is the variable/value to be rounded, and the second
+is the number decimal places. Read more about <kbd>round()</kbd> in the
+<a href="https://docs.python.org/3/library/functions.html#round" class="external-link">official
+documentations</a>.
 </p>
 <ol start="2" style="list-style-type: decimal"><li>
-<p>Now without creating a new variable, perform the following operation:</p>
-<p><span class="math display">\[pi = \frac{pi}{(3 \bmod 2) - 1}\]</span></p>
+<p>Now without creating a new variable, perform the following
+operation:</p>
+<p><span class="math display">\[pi = \frac{pi}{(3 \bmod 2) -
+1}\]</span></p>
 </li>
-</ol><p>where the expression ’‘<span class="math inline">\(3 \bmod 2\)</span>’’ represents the remainder for the division of 3 by 2.</p>
+</ol><p>where the expression ’‘<span class="math inline">\(3 \bmod
+2\)</span>’’ represents the remainder for the division of 3 by 2.</p>
 <p>Explain the output.</p>
 </div>
 </div>
@@ -1909,7 +2239,8 @@ Suppose we have a variable defined as <code>total_residues = 52</code> and want 
 <div class="accordion-body">
 <pre><code>	pi /= (3 % 2) - 1
 </code></pre>
-<p>The calculation raises a <code>ZeroDivisionError</code>. This is because division by zero is mathematically impossible.</p>
+<p>The calculation raises a <code>ZeroDivisionError</code>. This is
+because division by zero is mathematically impossible.</p>
 </div>
 </div>
 </div>
@@ -1918,20 +2249,27 @@ Suppose we have a variable defined as <code>total_residues = 52</code> and want 
 <div class="section level4">
 <h4 id="precedence"><strong>Precedence</strong><a class="anchor" aria-label="anchor" href="#precedence"></a></h4>
 <p style="text-align: justify;">
-In mathematics and computer programming, there is a collection of conventional rules on the precedence of procedures to evaluate a mathematical expression. This collection of rules is referred to as the <em>order of operation</em> or <em>operator precedence</em>.
+In mathematics and computer programming, there is a collection of
+conventional rules on the precedence of procedures to evaluate a
+mathematical expression. This collection of rules is referred to as the
+<em>order of operation</em> or <em>operator precedence</em>.
 </p>
 <p>Suppose we have a mathematical expression as follows:</p>
 <span class="math display">\[x = 2 + 3 \times 9\]</span>
 <p style="text-align: justify;">
-Such an expression can <em>only</em> be evaluated correctly if we do the multiplication first and then perform the addition. This means that the evaluation is done as follows:
+Such an expression can <em>only</em> be evaluated correctly if we do the
+multiplication first and then perform the addition. This means that the
+evaluation is done as follows:
 </p>
 <p><span class="math display">\[given:3 \times 9  = 27\]</span> <span class="math display">\[\implies x = 2 + 27\]</span><br><span class="math display">\[ = 29\]</span></p>
 <p>For instance, in an expression such as:</p>
-<p><span class="math display">\[x = 2 \times (3 + (5 - 1)^2)\]</span></p>
+<p><span class="math display">\[x = 2 \times (3 + (5 -
+1)^2)\]</span></p>
 <p>the evaluation workflow may be described as follows:</p>
 <span class="math display">\[x = 2 \times (3 + 4^2)\]</span> <span class="math display">\[ = 2 \times (3 + 16)\]</span> <span class="math display">\[ = 38\]</span>
 <p style="text-align: justify;">
-The same principle applies in Python. This means that if we use Python to evaluate the above expression, the result would be identical:
+The same principle applies in Python. This means that if we use Python
+to evaluate the above expression, the result would be identical:
 </p>
 <div class="codewrapper sourceCode" id="cb119">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1945,28 +2283,30 @@ The same principle applies in Python. This means that if we use Python to evalua
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">38</span></span></code></pre>
 </div>
-<div id="callout15" class="callout callout">
+<div id="remember-11" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-11" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout15"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-11"></a>
 </h3>
 <div class="callout-content">
-<p>Operator precedence in mathematical operations may be described as follows:</p>
+<p>Operator precedence in mathematical operations may be described as
+follows:</p>
 <ol style="list-style-type: decimal"><li>Exponents and roots</li>
 <li>Multiplication and division</li>
 <li>Addition and subtraction</li>
-</ol><p>If there are any parenthesis <code>( )</code> in the expression, the expression is evaluated from the innermost parenthesis outwards.</p>
+</ol><p>If there are any parenthesis <code>( )</code> in the expression, the
+expression is evaluated from the innermost parenthesis outwards.</p>
 </div>
 </div>
 </div>
-<div id="challenge10" class="callout challenge">
+<div id="do-it-yourself-6" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-6" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge10"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself-6"></a>
 </h3>
 <div class="callout-content">
 <p>Display the result of each item in the following format:</p>
@@ -1985,7 +2325,8 @@ The same principle applies in Python. This means that if we use Python to evalua
 </ol><ol start="3" style="list-style-type: decimal"><li>Given</li>
 </ol><pre><code><span><span class="va">a</span> <span class="op">=</span> <span class="fl">2</span></span>
 <span><span class="va">b</span> <span class="op">=</span> <span class="fl">5</span></span></code></pre>
-<p>use <code>a</code> and <code>b</code> to calculate the following expressions:</p>
+<p>use <code>a</code> and <code>b</code> to calculate the following
+expressions:</p>
 <ol style="list-style-type: lower-alpha"><li><span class="math inline">\((a + b)^2\)</span></li>
 <li><span class="math inline">\(a^2 + 2ab + b^2\)</span></li>
 </ol></div>
@@ -2142,13 +2483,19 @@ The same principle applies in Python. This means that if we use Python to evalua
 <div class="section level4">
 <h4 id="subsubsec:mathematicalOperations:nonNumerics"><strong>Non-numeric values</strong><a class="anchor" aria-label="anchor" href="#subsubsec:mathematicalOperations:nonNumerics"></a></h4>
 <p style="text-align: justify;">
-It sometimes makes sense to apply <em>some</em> mathematical operations to non-numeric variables too.
+It sometimes makes sense to apply <em>some</em> mathematical operations
+to non-numeric variables too.
 </p>
 <p style="text-align: justify;">
-We can multiply strings to repeat them. There is no specific advantage to the use of multiplication instead of manually repeating characters or words, but it makes our code look cleaner, and that’s always a good thing!
+We can multiply strings to repeat them. There is no specific advantage
+to the use of multiplication instead of manually repeating characters or
+words, but it makes our code look cleaner, and that’s always a good
+thing!
 </p>
 <p style="text-align: justify;">
-We can also add string values to each other. This is called <em>string concatenation</em>. It is a useful method for concatenating a few strings and / or string variables.
+We can also add string values to each other. This is called <em>string
+concatenation</em>. It is a useful method for concatenating a few
+strings and / or string variables.
 </p>
 <div class="codewrapper sourceCode" id="cb142">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2175,40 +2522,57 @@ We can also add string values to each other. This is called <em>string concatena
 --------------------
 DoB: 01/01/1990</code></pre>
 </div>
-<div id="callout16" class="callout callout">
+<div id="remember-12" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-12" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout16"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-12"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-New line character or <code>'\n'</code> is a universal directive to induce a line-break in Unix based operating systems (MACOS) and Linux). In WINDOWS, we usually us <code>'\r'</code> or <code>'\r\n'</code> instead. These are known as <a href="07-strings.html#subsubsec:escapeSequences">escape sequences</a>, which we explore in additional details under <a href="07-strings.html#subsec:stringOperations">string operations</a> in chapter <a href="07-strings.html">Strings</a>
+New line character or <code>'\n'</code> is a universal directive to
+induce a line-break in Unix based operating systems (MACOS) and Linux).
+In WINDOWS, we usually us <code>'\r'</code> or <code>'\r\n'</code>
+instead. These are known as <a href="07-strings.html#subsubsec:escapeSequences">escape sequences</a>,
+which we explore in additional details under <a href="07-strings.html#subsec:stringOperations">string operations</a> in
+chapter <a href="07-strings.html">Strings</a>
 </p>
 </div>
 </div>
 </div>
-<div id="challenge11" class="callout challenge">
+<div id="diy:mathOpts:Huntington" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="diy:mathOpts:Huntington" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge11"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#diy:mathOpts:Huntington"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-The risk of Huntington’s disease appears to increase proportional to the continuous repetition of <code>CAG</code> nucleotides (glutamine codon) once they exceed 35 near the beginning of the Huntingtin (<code>IT15</code>) gene. The <code>CAG</code> repeats are also referred to as a polyglutamine or polyQ tract.
+The risk of Huntington’s disease appears to increase proportional to the
+continuous repetition of <code>CAG</code> nucleotides (glutamine codon)
+once they exceed 35 near the beginning of the Huntingtin
+(<code>IT15</code>) gene. The <code>CAG</code> repeats are also referred
+to as a polyglutamine or polyQ tract.
 </p>
 <pre><code><span><span class="va">glutamine_codon</span> <span class="op">=</span> <span class="st">'CAG'</span></span></code></pre>
-<ol style="list-style-type: decimal"><li>Create a polynucleotide chain representing 36 glutamine codons. Store the result in a variable called <code>polyq_codons</code>.</li>
+<ol style="list-style-type: decimal"><li>Create a polynucleotide chain representing 36 glutamine codons.
+Store the result in a variable called <code>polyq_codons</code>.</li>
 </ol><p>Display the result as:</p>
 <pre><code>Polyglutamine codons with 36 repeats: XXXXXXXXX...</code></pre>
-<ol start="2" style="list-style-type: decimal"><li>Use <kbd>len()</kbd> to work out the length of <code>polyq_codons</code>, and store the result in a variable called <code>polyq_codons_length</code>.</li>
+<ol start="2" style="list-style-type: decimal"><li>Use <kbd>len()</kbd> to work out the length of
+<code>polyq_codons</code>, and store the result in a variable called
+<code>polyq_codons_length</code>.</li>
 </ol><p>Display the result in the following format:</p>
 <pre><code>Number of nucleotides in a polyglutamine with 36 repeats: XXX</code></pre>
-<ol start="3" style="list-style-type: decimal"><li><p>Use <kbd>len()</kbd> to work out the length of <code>glutamin_codon</code>, and store the result in variable <code>amino_acids_per_codon</code>.</p></li>
-<li><p>Divide <code>polyq_codons_length</code> by <code>amino_acids_per_codon</code> to prove that the chain contains the codon for exactly 36 amino acids. Store the result in variable <code>polyq_peptide_length</code>.</p></li>
+<ol start="3" style="list-style-type: decimal"><li><p>Use <kbd>len()</kbd> to work out the length of
+<code>glutamin_codon</code>, and store the result in variable
+<code>amino_acids_per_codon</code>.</p></li>
+<li><p>Divide <code>polyq_codons_length</code> by
+<code>amino_acids_per_codon</code> to prove that the chain contains the
+codon for exactly 36 amino acids. Store the result in variable
+<code>polyq_peptide_length</code>.</p></li>
 </ol><p>Display the result in the following format:</p>
 <pre><code>Number of amino acids in a polyglutamine with 36 repeats: XXX</code></pre>
 <ol start="5" style="list-style-type: decimal"><li>Determine the types for the following variable:</li>
@@ -2216,11 +2580,14 @@ The risk of Huntington’s disease appears to increase proportional to the conti
 <li><p>polyq_codons_length</p></li>
 <li>
 <p>polyq_peptide_length</p>
-<p>and display the result for each item in the following format:</p>
+<p>and display the result for each item in the following
+format:</p>
 </li>
 </ul><pre><code>Value: XXX - Type: &lt;class 'XXXX'&gt;</code></pre>
 <ol start="6" style="list-style-type: decimal"><li><p>Are all the variables in task #5 of the same type? Why?</p></li>
-<li><p>Repeat from task #4, but this time use an alternative method of division as outlined in See Table <a href="#fig:nativeTypes">Routine mathematical operations in Python</a>.</p></li>
+<li><p>Repeat from task #4, but this time use an alternative method of
+division as outlined in See Table <a href="#fig:nativeTypes">Routine
+mathematical operations in Python</a>.</p></li>
 </ol></div>
 </div>
 </div>
@@ -2359,7 +2726,11 @@ Value: 36.0 - Type: &lt;class 'float'&gt;</code></pre>
 <div id="collapseSolution21" class="accordion-collapse collapse" data-bs-parent="#accordionSolution21" aria-labelledby="headingSolution21">
 <div class="accordion-body">
 <p style="text-align: justify;">
-No, <code>polyq_peptide_length</code> is an instance of type <code>float</code>. This is because we used the normal division (<code>/</code>) and not floor division (<code>//</code>}) to calculate its value. The result of normal division is always presented as a floating point number.
+No, <code>polyq_peptide_length</code> is an instance of type
+<code>float</code>. This is because we used the normal division
+(<code>/</code>) and not floor division (<code>//</code>}) to calculate
+its value. The result of normal division is always presented as a
+floating point number.
 </p>
 </div>
 </div>
@@ -2399,16 +2770,17 @@ Value: 36 - Type: &lt;class 'int'&gt;</code></pre>
 </div>
 </div>
 </div>
-<div id="callout17" class="callout callout">
+<div id="interesting-fact-1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="interesting-fact-1" class="callout-inner">
-<h3 class="callout-title">Interesting Fact<a class="anchor" aria-label="anchor" href="#callout17"></a>
+<h3 class="callout-title">Interesting Fact<a class="anchor" aria-label="anchor" href="#interesting-fact-1"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-The Boolean data type is named after the English mathematician and logician George Boole (1815–1864).
+The Boolean data type is named after the English mathematician and
+logician George Boole (1815–1864).
 </p>
 </div>
 </div>
@@ -2418,25 +2790,35 @@ The Boolean data type is named after the English mathematician and logician Geor
 <div class="section level3">
 <h3 id="subsec:logicalOperatons"><strong>Logical Operations</strong><a class="anchor" aria-label="anchor" href="#subsec:logicalOperatons"></a></h3>
 <p style="text-align: justify;">
-An operation may involve a comparison. The result of such operations is either <code>True</code> or <code>False</code>. This is known as the <em>Boolean</em> or <code>bool</code> data type. In reality, however, computers record <code>True</code> and <code>False</code> as <code>1</code> and <code>0</code> respectively.
+An operation may involve a comparison. The result of such operations is
+either <code>True</code> or <code>False</code>. This is known as the
+<em>Boolean</em> or <code>bool</code> data type. In reality, however,
+computers record <code>True</code> and <code>False</code> as
+<code>1</code> and <code>0</code> respectively.
 </p>
 <p style="text-align: justify;">
-Operations with Boolean results are referred to as <em>logical operations</em>. Testing the results of such operations is known as <em>truth value testing</em>.
+Operations with Boolean results are referred to as <em>logical
+operations</em>. Testing the results of such operations is known as
+<em>truth value testing</em>.
 </p>
-<p>Given the two variables <code>a</code> and <code>b</code> as follows:</p>
+<p>Given the two variables <code>a</code> and <code>b</code> as
+follows:</p>
 <pre><code><span><span class="va">a</span> <span class="op">=</span> <span class="fl">17</span></span>
 <span><span class="va">b</span> <span class="op">=</span> <span class="fl">5</span></span></code></pre>
-<p>Boolean operations may be defined as outlined in Table <a href="#tab:routineOperations">Routine logical operations in Python.</a>.</p>
-<figure><img src="../fig/routine_logical_operations.png" id="tab:routineOperations" alt="" class="figure mx-auto d-block"><figcaption>Routine logical operations in Python.</figcaption></figure><div id="challenge12" class="callout challenge">
+<p>Boolean operations may be defined as outlined in Table <a href="#tab:routineOperations">Routine logical operations in
+Python.</a>.</p>
+<figure><img src="../fig/routine_logical_operations.png" id="tab:routineOperations" alt="" class="figure mx-auto d-block"><figcaption>Routine logical operations in Python.</figcaption></figure><div id="diy:equivalence" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="diy:equivalence" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge12"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#diy:equivalence"></a>
 </h3>
 <div class="callout-content">
-<p>We know that in algebra, the first identity (square of a binomial) is:</p>
-<p><span class="math display">\[(a + b)^2 = a^2 + 2ab + b^2\]</span> now given:</p>
+<p>We know that in algebra, the first identity (square of a binomial)
+is:</p>
+<p><span class="math display">\[(a + b)^2 = a^2 + 2ab + b^2\]</span> now
+given:</p>
 <pre><code><span><span class="va">a</span> <span class="op">=</span> <span class="fl">15</span></span>
 <span><span class="va">b</span> <span class="op">=</span> <span class="fl">4</span></span></code></pre>
 <ol style="list-style-type: decimal"><li>Calculate</li>
@@ -2446,7 +2828,10 @@ Operations with Boolean results are referred to as <em>logical operations</em>. 
 <span><span class="va">y2</span> <span class="op">=</span> <span class="va">XX</span></span></code></pre>
 <p style="text-align: justify;">
 </p>
-<ol start="2" style="list-style-type: decimal"><li>Determine whether or not <code>y_1</code> is indeed equal to <code>y_2</code>. Store the result of your test in another variable called <code>equivalence</code>. Display the results in the following format:</li>
+<ol start="2" style="list-style-type: decimal"><li>Determine whether or not <code>y_1</code> is indeed equal to
+<code>y_2</code>. Store the result of your test in another variable
+called <code>equivalence</code>. Display the results in the following
+format:</li>
 </ol><pre><code>Where a = XX and b = XX: 
 y1 is equal to y2: [True/False]</code></pre>
 </div>
@@ -2512,19 +2897,24 @@ y1 is equal to y2: True</code></pre>
 </div>
 <div class="section level4">
 <h4 id="sec:logicalStatements:Negation"><strong>Negation</strong><a class="anchor" aria-label="anchor" href="#sec:logicalStatements:Negation"></a></h4>
-<p>We can also use negation in logical operations. Negation in Python is implemented using <kbd>not</kbd>:</p>
-<figure><img src="../fig/Negation.png" alt="" class="figure mx-auto d-block"><figcaption>Negations in Python.</figcaption></figure><div id="challenge13" class="callout challenge">
+<p>We can also use negation in logical operations. Negation in Python is
+implemented using <kbd>not</kbd>:</p>
+<figure><img src="../fig/Negation.png" alt="" class="figure mx-auto d-block"><figcaption>Negations in Python.</figcaption></figure><div id="do-it-yourself-7" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-7" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge13"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself-7"></a>
 </h3>
 <div class="callout-content">
-<p>Using the information from previous <a href="#diy:equivalence">Do it Yourself</a>:</p>
+<p>Using the information from previous <a href="#diy:equivalence">Do it
+Yourself</a>:</p>
 <p style="text-align: justify;">
 </p>
-<ol style="list-style-type: decimal"><li>Without using <kbd>not</kbd>, determine whether or not <code>y_1</code> is <em>not equal</em> to <code>y_2</code>. Display the result of your test and store it in another variable called <code>inequivalent</code>.</li>
+<ol style="list-style-type: decimal"><li>Without using <kbd>not</kbd>, determine whether or not
+<code>y_1</code> is <em>not equal</em> to <code>y_2</code>. Display the
+result of your test and store it in another variable called
+<code>inequivalent</code>.</li>
 </ol><ol start="2" style="list-style-type: decimal"><li>Negate <code>inequivalent</code> and display the result.</li>
 </ol></div>
 </div>
@@ -2584,14 +2974,15 @@ y1 is equal to y2: True</code></pre>
 <div class="section level4">
 <h4 id="disjun"><strong>Disjunctions and Conjunctions</strong><a class="anchor" aria-label="anchor" href="#disjun"></a></h4>
 <p style="text-align: justify;">
-Logical operations may be combined using conjunction with <kbd>and</kbd> and disjunction with <kbd>or</kbd> to create more complex logics:
+Logical operations may be combined using conjunction with <kbd>and</kbd>
+and disjunction with <kbd>or</kbd> to create more complex logics:
 </p>
-<figure><img src="../fig/Disjunction.png" alt="" class="figure mx-auto d-block"><figcaption>Disjunctions and Conjunctions in Python.</figcaption></figure><div id="challenge14" class="callout challenge">
+<figure><img src="../fig/Disjunction.png" alt="" class="figure mx-auto d-block"><figcaption>Disjunctions and Conjunctions in Python.</figcaption></figure><div id="do-it-yourself-8" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-8" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge14"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself-8"></a>
 </h3>
 <div class="callout-content">
 <p>Given</p>
@@ -2608,11 +2999,14 @@ Logical operations may be combined using conjunction with <kbd>and</kbd> and dis
 <li>
 <code>not</code> a <code>or</code> (b <code>and</code> c)</li>
 <li>
-<code>not</code> a <code>or</code> <code>not</code>(b <code>and</code> c)</li>
+<code>not</code> a <code>or</code> <code>not</code>(b
+<code>and</code> c)</li>
 <li>
-<code>not</code> a <code>and</code> <code>not</code>(b <code>and</code> c)</li>
+<code>not</code> a <code>and</code> <code>not</code>(b
+<code>and</code> c)</li>
 <li>
-<code>not</code> a <code>and</code> <code>not</code>(b <code>or</code> c)</li>
+<code>not</code> a <code>and</code> <code>not</code>(b
+<code>or</code> c)</li>
 </ol><p>Display the results in the following format:</p>
 <pre><code><span><span class="fl">1.</span> <span class="op">[</span><span class="va">True</span><span class="op">/</span><span class="va">False</span><span class="op">]</span></span>
 <span><span class="fl">2.</span> <span class="op">[</span><span class="va">True</span><span class="op">/</span><span class="va">False</span><span class="op">]</span></span>
@@ -2862,49 +3256,65 @@ Logical operations may be combined using conjunction with <kbd>and</kbd> and dis
 <div class="section level4">
 <h4 id="complex-logical-operations"><strong>Complex logical operations</strong><a class="anchor" aria-label="anchor" href="#complex-logical-operations"></a></h4>
 <p style="text-align: justify;">
-It may help to break down more complex operations, or use parenthesis to make them easier to both read and write:
+It may help to break down more complex operations, or use parenthesis to
+make them easier to both read and write:
 </p>
 <figure><img src="../fig/Complex_Logical_Operations.png" alt="" class="figure mx-auto d-block"><figcaption>Complex Logical Operations in Python.</figcaption></figure><p style="text-align: justify;">
-Notice that in the last example, all notations are essentially the same and only vary in terms of their collective results as defined using parenthesis. Always remember that in a logical statement:
+Notice that in the last example, all notations are essentially the same
+and only vary in terms of their collective results as defined using
+parenthesis. Always remember that in a logical statement:
 </p>
-<div id="checklist2" class="callout checklist">
+<div id="logical-statement" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
 <div id="logical-statement" class="callout-inner">
-<h3 class="callout-title">Logical statement<a class="anchor" aria-label="anchor" href="#checklist2"></a>
+<h3 class="callout-title">Logical statement<a class="anchor" aria-label="anchor" href="#logical-statement"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
 </p>
 <ul class="task-list"><li>
-<input type="checkbox" disabled checked>
-The statement in parenthesis does <strong>not</strong> have precedence over the rest of the state (unlike mathematical statements). It merely defines an independent part of the operation whose response is evaluated separately.</li>
+<input type="checkbox" disabled checked>The statement in
+parenthesis does <strong>not</strong> have precedence over the rest of
+the state (unlike mathematical statements). It merely defines an
+independent part of the operation whose response is evaluated
+separately.</li>
 </ul><p style="text-align: justify;">
 </p>
 <ul class="task-list"><li>
-<input type="checkbox" disabled checked>
-The precedence is established on a first come, first serve basis (from left to right).</li>
+<input type="checkbox" disabled checked>The precedence is
+established on a first come, first serve basis (from left to
+right).</li>
 </ul><p style="text-align: justify;">
 </p>
 <ul class="task-list"><li>
-<input type="checkbox" disabled checked>
-Always use parenthesis in longer statements for clarification.</li>
+<input type="checkbox" disabled checked>Always use
+parenthesis in longer statements for clarification.</li>
 </ul><p style="text-align: justify;">
 </p>
 <ul class="task-list"><li>
-<input type="checkbox" disabled checked>
-In disjunctive statements —i.e. a &gt; 5 <code>or</code> b &gt; 5, if the first part is <code>True</code>, the second part is <em>not</em> checked. In other words, if a is greater than 5, the computer does not proceed to check whether or not b is greater than 5.</li>
+<input type="checkbox" disabled checked>In disjunctive
+statements —i.e. a &gt; 5 <code>or</code> b &gt; 5, if the first part is
+<code>True</code>, the second part is <em>not</em> checked. In other
+words, if a is greater than 5, the computer does not proceed to check
+whether or not b is greater than 5.</li>
 </ul><p style="text-align: justify;">
 </p>
 <ul class="task-list"><li>
-<input type="checkbox" disabled checked>
-In conjunctive statements —i.e. a &gt; 5 <code>and</code> b &gt; 5, the statement proceeds to the seconds part if and only if the first part is <code>True</code>. In other words, the result of a conjunctive statement is only <code>True</code> if and only if both a and b are greater than 5. If a is <code>False</code>, the entire statement will inevitably be <code>False</code>.</li>
+<input type="checkbox" disabled checked>In conjunctive
+statements —i.e. a &gt; 5 <code>and</code> b &gt; 5, the statement
+proceeds to the seconds part if and only if the first part is
+<code>True</code>. In other words, the result of a conjunctive statement
+is only <code>True</code> if and only if both a and b are greater than
+5. If a is <code>False</code>, the entire statement will inevitably be
+<code>False</code>.</li>
 </ul><p style="text-align: justify;">
 </p>
 <ul class="task-list"><li>
-<input type="checkbox" disabled checked>
-The longer the statement, the more difficult it would be to understand it properly, and by extension, the more likely it would be to cause problems.</li>
+<input type="checkbox" disabled checked>The longer the
+statement, the more difficult it would be to understand it properly, and
+by extension, the more likely it would be to cause problems.</li>
 </ul></div>
 </div>
 </div>
@@ -3015,23 +3425,27 @@ The longer the statement, the more difficult it would be to understand it proper
 <pre class="output" tabindex="0"><code><span><span class="va">True</span></span></code></pre>
 </div>
 <p style="text-align: justify;">
-These are only a few examples. There are endless possibilities, try them yourself and see how they work.
+These are only a few examples. There are endless possibilities, try them
+yourself and see how they work.
 </p>
-<div id="callout18" class="callout callout">
+<div id="remember-13" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="remember-13" class="callout-inner">
-<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#callout18"></a>
+<h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-13"></a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-Some logical operations may be written in different ways. However, we should always use the notation that is most coherent in the context of our code. If in doubt, use the simplest / shortest notation.
+Some logical operations may be written in different ways. However, we
+should always use the notation that is most coherent in the context of
+our code. If in doubt, use the simplest / shortest notation.
 </p>
 </div>
 </div>
 </div>
-<p>To that end, you may want to use variables to split complex statements down to smaller portions:</p>
+<p>To that end, you may want to use variables to split complex
+statements down to smaller portions:</p>
 <div class="codewrapper sourceCode" id="cb214">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3072,12 +3486,12 @@ Some logical operations may be written in different ways. However, we should alw
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="va">True</span></span></code></pre>
 </div>
-<div id="challenge15" class="callout challenge">
+<div id="do-it-yourself-9" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="do-it-yourself-9" class="callout-inner">
-<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#challenge15"></a>
+<h3 class="callout-title">Do it Yourself<a class="anchor" aria-label="anchor" href="#do-it-yourself-9"></a>
 </h3>
 <div class="callout-content">
 <p>Given</p>
@@ -3097,7 +3511,8 @@ Some logical operations may be written in different ways. However, we should alw
 <li>
 <span class="math inline">\(\frac{12}{a}\)</span> and <span class="math inline">\(a\times4 &lt; b\)</span>
 </li>
-</ul><p>where “|…|” represents the absolute value, and “<span class="math inline">\(n \bmod m\)</span>” represents the remainder for the division of <span class="math inline">\(n\)</span> by <span class="math inline">\(m\)</span>.}</p>
+</ul><p>where “|…|” represents the absolute value, and “<span class="math inline">\(n \bmod m\)</span>” represents the remainder for
+the division of <span class="math inline">\(n\)</span> by <span class="math inline">\(m\)</span>.}</p>
 <p>Display the results in the following format:</p>
 <pre><code><span><span class="fl">1.</span> <span class="op">[</span><span class="va">True</span><span class="op">/</span><span class="va">False</span><span class="op">]</span></span>
 <span><span class="fl">2.</span> <span class="op">[</span><span class="va">True</span><span class="op">/</span><span class="va">False</span><span class="op">]</span></span>
@@ -3275,21 +3690,29 @@ Some logical operations may be written in different ways. However, we should alw
 </section><section id="exercises"><h2 class="section-heading">Exercises<a class="anchor" aria-label="anchor" href="#exercises"></a>
 </h2>
 <hr class="half-width"></section><section id="section"><h2 class="section-heading"></h2>
-<hr class="half-width"><div id="challenge16" class="callout challenge">
+<hr class="half-width"><div id="end-of-chapter-exercises" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="end-of-chapter-exercises" class="callout-inner">
-<h3 class="callout-title">End of chapter Exercises<a class="anchor" aria-label="anchor" href="#challenge16"></a>
+<h3 class="callout-title">End of chapter Exercises<a class="anchor" aria-label="anchor" href="#end-of-chapter-exercises"></a>
 </h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li><p>Write and execute a Python script to display your own name as an output in the terminal.</p></li>
+<ol style="list-style-type: decimal"><li><p>Write and execute a Python script to display your own name as an
+output in the terminal.</p></li>
 <li><p>Write and execute a Python script that:</p></li>
-</ol><ul><li>Displays the text <code>Please press enter to continue...</code>, and waits for the user to press enter.</li>
-<li>Once the user pressed enter, the program should display <code>Welcome to my programme!</code> before it terminates.</li>
+</ol><ul><li>Displays the text <code>Please press enter to continue...</code>,
+and waits for the user to press enter.</li>
+<li>Once the user pressed enter, the program should display
+<code>Welcome to my programme!</code> before it terminates.</li>
 </ul><ol start="3" style="list-style-type: decimal"><li>
-<p>We have an enzyme whose reaction velocity is <span class="math inline">\(v=50~mol \cdot L^{-1} \cdot s^{-1}\)</span> at the substrate concentration of <span class="math inline">\([S] = K_{m} = 2.5~mol \cdot L^{-1}\)</span>. Work out the maximum reaction velocity or <span class="math inline">\(V_{\max}\)</span> for this enzyme using the Michaelis-Menten equation:</p>
-<p><span class="math display">\[v = \frac{V_{\max} [\textrm{S}]}{K_{m} + [\textrm{S}]}\]</span></p>
+<p>We have an enzyme whose reaction velocity is <span class="math inline">\(v=50~mol \cdot L^{-1} \cdot s^{-1}\)</span> at the
+substrate concentration of <span class="math inline">\([S] = K_{m} =
+2.5~mol \cdot L^{-1}\)</span>. Work out the maximum reaction velocity or
+<span class="math inline">\(V_{\max}\)</span> for this enzyme using the
+Michaelis-Menten equation:</p>
+<p><span class="math display">\[v = \frac{V_{\max} [\textrm{S}]}{K_{m} +
+[\textrm{S}]}\]</span></p>
 </li>
 </ol></div>
 </div>
@@ -3363,10 +3786,13 @@ Some logical operations may be written in different ways. However, we should alw
 <h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>Two key functions for I/O operations are <kbd>print()</kbd> and <kbd>input()</kbd>
+<ul><li>Two key functions for I/O operations are <kbd>print()</kbd> and
+<kbd>input()</kbd>
 </li>
-<li>Three most commonly used variables such as <code>int</code>, <code>float</code>, and <code>str</code>.</li>
-<li>Variable scope can be local or global depending where they are being used.</li>
+<li>Three most commonly used variables such as <code>int</code>,
+<code>float</code>, and <code>str</code>.</li>
+<li>Variable scope can be local or global depending where they are being
+used.</li>
 <li>Mathematical operations follow conventional rules of precedence</li>
 <li>Logical operations provide results in Boolean (True or False)</li>
 </ul></div>
@@ -3406,8 +3832,8 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/LearnToDiscover/sandpaper/tree/l2d" class="external-link">sandpaper (0.11.9)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/aae8083f519fb74a753e0765bc83e73b31ac42eb" class="external-link">pegboard (0.5.3)</a>,
+        <p>Built with <a href="https://github.com/LearnToDiscover/sandpaper/tree/l2d" class="external-link">sandpaper (0.12.0.9000)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/3b06f4559892e31ff0a6bae1d838cd1ba6fd94fb" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/LearnToDiscover/varnish/tree/f412e8bbc14a5110120155e1af9282842877c62f" class="external-link">varnish (0.2.14)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
@@ -3428,9 +3854,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/instructor/02-input_output.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/instructor/02-input_output.html",
-  "dateCreated": "2022-11-09",
-  "dateModified": "2023-04-18",
-  "datePublished": "2023-04-25"
+  "dateCreated": "2023-05-26",
+  "dateModified": "2023-05-26",
+  "datePublished": "2023-05-26"
 }
 
   </script><script>

@@ -83,8 +83,6 @@ When constructing a long ```dict``` with several *items* that span over several 
 We can therefore implement the diagram displayed in [Figure](#assArr) in Python as follows:
 
 
-
-
 ```python
 protein_kinases = {
   'PKA': 'Involved in regulation of glycogen, sugar, and lipid metabolism.',
@@ -219,10 +217,7 @@ print(protein_kinases['GSK3'])
 ```
 
 ```{.error}
-Error in py_call_impl(callable, dots$args, dots$keywords): KeyError: 'GSK3'
-
-Detailed traceback:
-  File "<string>", line 1, in <module>
+Error: KeyError: 'GSK3'
 ```
 
 :::::::::::::::::::::::::::::: challenge 
@@ -280,10 +275,7 @@ test_dict = {
 ```
 
 ```{.error}
-Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: unhashable type: 'list'
-
-Detailed traceback:
-  File "<string>", line 1, in <module>
+Error: TypeError: unhashable type: 'list'
 ```
 
 But we can use any immutable type as a *key*:
@@ -942,10 +934,7 @@ print(lac_repressor['gene'])
 ```
 
 ```{.error}
-Error in py_call_impl(callable, dots$args, dots$keywords): KeyError: 'gene'
-
-Detailed traceback:
-  File "<string>", line 1, in <module>
+Error: KeyError: 'gene'
 ```
 
 
