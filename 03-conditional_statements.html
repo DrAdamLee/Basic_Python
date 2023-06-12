@@ -268,7 +268,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Conditional Statements</h1>
-        <p> Last updated on 2023-05-26 | 
+        <p> Last updated on 2023-06-12 | 
         
         <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/03-conditional_statements.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -280,8 +280,6 @@
 
         
 
-<p><a href="03-conditional_statements.md.pdf"><strong>Download Chapter
-pdf</strong></a></p>
 <p><a href="03-conditional_statements.ipynb"><strong>Download Chapter
 notebook (ipynb)</strong></a></p>
 <div class="overview card">
@@ -494,93 +492,93 @@ the Australian Mathematics Trust.}</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <pre><code>To obtain the answer, we may write an algorithm in a pseudo-code format as follows:
-		
-  let a_total = 2
-  
-  let b_total = 9
-  
-  let current_total = absolute(a_total - b_total) + 1
-  
-  let a_total = b_total
-  
-  let b_total = current_total
-  
-  let current_year = 2002
-  
-			
-  do {
-				
-    current_total = absolute(a_total - b_total) + 1
-				
-    a_total = b_total
-    
-    b_total = current_total 
-				
-    current_year = current_year + 1
-				
-		} while current_total &gt; 1
-			
-			
-display current_year 
 
-		
-Given: 
+  let a_total = 2
+
+  let b_total = 9
+
+  let current_total = absolute(a_total - b_total) + 1
+
+  let a_total = b_total
+
+  let b_total = current_total
+
+  let current_year = 2002
+
+
+  do {
+
+    current_total = absolute(a_total - b_total) + 1
+
+    a_total = b_total
+
+    b_total = current_total
+
+    current_year = current_year + 1
+
+		} while current_total &gt; 1
+
+
+display current_year
+
+
+Given:
 
   year = 2000; a_total = 2
   year = 2001; b_total= 9
-			
-the above process with repeat the section written in curly brackets for as long 
+
+the above process with repeat the section written in curly brackets for as long
 as current_total &gt; 1:
-			
+
   current_year: 2002; a_total = 2, b_total = 9, current_total = 8
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2003; a_total = 9, b_total = 8; current_total = 2
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2004; a_total = 8; b_total = 2; current_total = 7
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2005; a_total = 2; b_total = 7; current_total = 6
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2006; a_total = 7; b_total = 6; current_total = 2
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2007; a_total = 6; b_total = 2; current_total = 5
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2008; a_total = 2; b_total = 5; current_total = 4
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2009; a_total = 5; b_total = 4; current_total = 2
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2010; a_total = 4; b_total = 2; current_total = 3
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2011; a_total = 2; b_total = 3; current_total = 2
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2012; a_total = 3; b_total = 2; current_total = 2
-			
+
 Is current_total &gt; 1 ? Yes:
-			
+
   current_year: 2013; a_total = 2; b_total = 2; current_total = 1
-			
+
 Is current_total &gt; 1 ? No:
 </code></pre>
 <p>The correct answer is <strong>c)</strong> 2013.</p>
@@ -591,9 +589,9 @@ will look like this:</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>a_total <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>b_total <span class="op">=</span> <span class="dv">9</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>current_year <span class="op">=</span> <span class="dv">2002</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>current_total <span class="op">=</span> <span class="bu">abs</span>(a_total <span class="op">-</span> b_total) <span class="op">+</span> <span class="dv">1</span></span>
@@ -644,7 +642,7 @@ by the condition and a colon;</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>students_present <span class="op">=</span> <span class="dv">15</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Conditional statement:</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> students_present <span class="op">&gt;</span> <span class="dv">10</span>:  <span class="co"># Initiation</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Directive (must be indented).</span></span>
@@ -662,13 +660,13 @@ condition and a colon;</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>students_present <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Conditional statement:</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> students_present <span class="op">&gt;</span> <span class="dv">10</span>:  <span class="co"># Initiation</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Directive (must be indented).</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'More than 10 students are present.'</span>)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="dv">0</span> <span class="op">&lt;</span> students_present <span class="op">&lt;</span> <span class="dv">10</span>:</span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Less than 10 students are present.'</span>)</span></code></pre>
 </div>
@@ -683,7 +681,7 @@ condition and a colon;</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>students_present <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Conditional statement:</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> students_present <span class="op">&gt;</span> <span class="dv">10</span>:  <span class="co"># Initiation</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Directive (must be indented).</span></span>
@@ -737,18 +735,18 @@ it. In other words, the action(s) within a conditional statement
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Statement A:</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> <span class="dv">0</span>: </span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># First dedented line before the block.  </span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># This is a block, and it belongs to the </span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># First dedented line before the block.</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># This is a block, and it belongs to the</span></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># preceding "if" (Statement A):</span></span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The value is positive.'</span>)</span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># We can have nested blocks too.</span></span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Statement B:</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> value <span class="op">&gt;</span> <span class="dv">9</span>:  </span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> value <span class="op">&gt;</span> <span class="dv">9</span>:</span>
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># First dedented line before the block.</span></span>
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># This is another block (nested).</span></span>
 <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># This block belongs to the preceding "if" (Statement B).</span></span>
@@ -760,12 +758,12 @@ it. In other words, the action(s) within a conditional statement
 <span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'The value is a single digit.'</span>)</span>
 <span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Introducing an alternative condition for Statement A:</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">&lt;</span> <span class="dv">0</span>: </span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">&lt;</span> <span class="dv">0</span>:</span>
 <span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co"># This block belongs to the preceding "elif".</span></span>
 <span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The value is negative.'</span>)</span>
 <span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Introducing a default behaviour for Statement A:</span></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:  </span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="co"># This block belongs to the preceding "else".</span></span>
 <span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The value is zero.'</span>)</span></code></pre>
 </div>
@@ -793,11 +791,11 @@ follows:
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> <span class="dv">9</span>:</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'The value is positive.'</span>)</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'The value is not a single digit.'</span>)</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">&gt;</span> <span class="dv">0</span>: </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">&gt;</span> <span class="dv">0</span>:</span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'The value is positive.'</span>)</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'The value is a single digit.'</span>)</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">&lt;</span> <span class="dv">0</span>:</span>
@@ -821,7 +819,7 @@ somewhere else in your code. Doing so will cause an
 a bad practice in Python.
 </p>
 <pre><code>value = 10
-	
+
 if value &gt; 0:
     print('The value is: ')  # Indented with 4 spaces.
    print('POSITIVE.')  # Indented with 3 spaces.
@@ -881,7 +879,7 @@ create 5 polyQ tracts containing 26, 15, 39, 32, 36, and 54 codons. Use
 these polynucleotide chains to test your conditional statement.
 </p>
 <p>Display the result for each chain in the following format:</p>
-<pre><code>PolyQ chain with XXX number of CAG codons: 
+<pre><code>PolyQ chain with XXX number of CAG codons:
 Status: XXX
 Classification: XXX</code></pre>
 <p style="text-align: justify;">
@@ -900,7 +898,7 @@ Yourself</a> for additional information.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -916,9 +914,9 @@ Yourself</a> for additional information.
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>signle_codon <span class="op">=</span> <span class="bu">len</span>(<span class="st">'CAG'</span>)</span>
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>len_polyq <span class="op">=</span> <span class="bu">len</span>(polyq_codons) </span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>len_polyq <span class="op">=</span> <span class="bu">len</span>(polyq_codons)</span>
 <span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>polyq <span class="op">=</span> len_polyq <span class="op">/</span> signle_codon </span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>polyq <span class="op">=</span> len_polyq <span class="op">/</span> signle_codon</span>
 <span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Constructing the conditional statement:</span></span>
 <span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
@@ -946,11 +944,11 @@ Yourself</a> for additional information.
 <span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a><span class="co">#Displaying the results:</span></span>
 <span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'PolyQ chain with'</span>, polyq, <span class="st">'number of CAG codons:'</span>) </span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'PolyQ chain with'</span>, polyq, <span class="st">'number of CAG codons:'</span>)</span>
 <span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Classification:'</span>, classification)</span>
 <span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Status:'</span>, status)</span>
 <span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a><span class="co">#Repeat this with 15, 39, 32, 36, and 54 codons. </span></span></code></pre>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a><span class="co">#Repeat this with 15, 39, 32, 36, and 54 codons.</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -997,15 +995,15 @@ conditional statement is skipped:
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>TATA_BOX <span class="op">=</span> <span class="st">'TATA'</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>promoter_region <span class="op">=</span> <span class="st">'GTAACTGTGGTATAATCGT'</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>	</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> TATA_BOX <span class="kw">in</span> promoter_region:  </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> TATA_BOX <span class="kw">in</span> promoter_region:</span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># This condition is "True", so this</span></span>
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># and only this block is executed.</span></span>
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'There is a "TATA" box in this promoter region.'</span>)</span>
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The last condition was "False", so this </span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The last condition was "False", so this</span></span>
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># block is skipped.</span></span>
 <span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'There is no "TATA" box in this promoter region.'</span>)</span></code></pre>
 </div>
@@ -1036,8 +1034,8 @@ of a <code>bool</code> variables as follows:
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>variable <span class="op">=</span> <span class="va">False</span> </span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>variable <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> variable <span class="op">==</span> <span class="va">False</span>:</span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The variable is False.'</span>)</span></code></pre>
 </div>
@@ -1059,8 +1057,8 @@ results.
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>variable <span class="op">=</span> <span class="va">False</span> </span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>variable <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> variable <span class="kw">is</span> <span class="va">False</span>:</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The variable is False.'</span>)</span></code></pre>
 </div>
@@ -1073,7 +1071,7 @@ results.
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>variable <span class="op">=</span> <span class="va">True</span> </span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>variable <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> variable <span class="kw">is</span> <span class="kw">not</span> <span class="va">False</span>:</span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1097,14 +1095,14 @@ always use <kbd>is</kbd> or <kbd>is not</kbd> to test for their
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>light_status <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> light_status <span class="kw">is</span> <span class="va">True</span>:</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> <span class="st">'The light is on; you may want to turn off the desk light.'</span></span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> <span class="st">'The light is off... turn it on.'</span></span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(action)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1125,15 +1123,15 @@ the above example as follows:
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>light_status <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> light_status:</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> <span class="st">'The light is on; you may want to turn off the desk light.'</span></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> <span class="st">'The light is off... turn it on.'</span></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(action)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1155,11 +1153,11 @@ instead:
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> light_status:</span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> <span class="st">'The light is off... turn it on.'</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> <span class="st">'The light is on; you may want to turn off the desk light.'</span></span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(action)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1188,14 +1186,14 @@ a student.</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>mark <span class="op">=</span> <span class="dv">63</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Thresholds </span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Thresholds</span></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>first <span class="op">=</span> <span class="dv">70</span></span>
 <span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>second_upper <span class="op">=</span> <span class="dv">60</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>second_lower <span class="op">=</span> <span class="dv">50</span> </span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>second_lower <span class="op">=</span> <span class="dv">50</span></span>
 <span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>passed <span class="op">=</span> <span class="dv">40</span>  <span class="co"># "pass" is a syntax in Python.</span></span>
 <span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> mark <span class="op">&gt;=</span> first:</span>
-<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    classification <span class="op">=</span> <span class="st">'First Class'</span> </span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    classification <span class="op">=</span> <span class="st">'First Class'</span></span>
 <span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> mark <span class="op">&gt;=</span> second_upper:</span>
 <span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    classification <span class="op">=</span> <span class="st">'Second Class (upper division)'</span></span>
 <span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> mark <span class="op">&gt;=</span> second_lower:</span>
@@ -1233,7 +1231,7 @@ has been determined for these sites ( <a href="https://www.ncbi.nlm.nih.gov/pmc/
 Thompson, 2012</a> ). All the proteins incorporate either a Serine or a
 Threonine residue that gets phosphorylated. Naturally, the consensus
 sequence for each protein varies slightly from that of other
-proteins.<br></li>
+proteins.</li>
 </ol><p style="text-align: justify;">
 When studying a polypeptide in the lab, a colleague realised that it has
 a phosphorylated Serine. So they tried to sequence the polypeptide, and
@@ -1285,7 +1283,7 @@ corresponding protein kinase; otherwise, it should say
   Please check these solutions only after submitting the assignments.
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1303,7 +1301,7 @@ corresponding protein kinase; otherwise, it should say
 <span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'PKC-eta'</span>)</span>
 <span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="st">"RRRKGSF"</span> <span class="kw">in</span> peptide <span class="kw">or</span> <span class="st">"RRRKKSF"</span> <span class="kw">in</span> peptide:</span>
 <span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'PKC-gamma'</span>)</span>
-<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> (<span class="st">"KKRRRSL"</span> <span class="kw">in</span> peptide <span class="kw">or</span> <span class="st">"RKRRRSL"</span> <span class="kw">in</span> peptide <span class="kw">or</span> </span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> (<span class="st">"KKRRRSL"</span> <span class="kw">in</span> peptide <span class="kw">or</span> <span class="st">"RKRRRSL"</span> <span class="kw">in</span> peptide <span class="kw">or</span></span>
 <span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"KKRRRSV"</span> <span class="kw">in</span> peptide <span class="kw">or</span> <span class="st">"RKRRRSV"</span> <span class="kw">in</span> peptide):</span>
 <span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'DMPK-E'</span>)</span>
 <span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
@@ -1390,7 +1388,7 @@ any links that you are not going to use.
   "url": "https://learntodiscover.github.io/Basic_Python/03-conditional_statements.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/03-conditional_statements.html",
   "dateCreated": "2023-06-12",
-  "dateModified": "2023-05-26",
+  "dateModified": "2023-06-12",
   "datePublished": "2023-06-12"
 }
 

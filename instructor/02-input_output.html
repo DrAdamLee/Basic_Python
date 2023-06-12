@@ -271,7 +271,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Variables, Types, and Operations</h1>
-        <p> Last updated on 2023-05-26 | 
+        <p> Last updated on 2023-06-12 | 
         
         <a href="https://github.com/LearnToDiscover/Basic_Python.git/edit/main/episodes/02-input_output.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -285,8 +285,6 @@
 
         
 
-<p><a href="../02-input_output.md.pdf"><strong>Download Chapter
-pdf</strong></a></p>
 <p><a href="../02-input_output.ipynb"><strong>Download Chapter notebook
 (ipynb)</strong></a></p>
 <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdr0capF7jloJhPH3Pki1B3LZoKOG16poOpuVJ7SL2LkwLHQA/viewform?pli=1" class="external-link"><span style="color: rgb(255, 0, 0);"><strong>Mandatory Lesson Feedback
@@ -913,11 +911,11 @@ separate the items with 3 spaces, as follows:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">'Oxidised low-density lipoprotein (LDL) receptor 1'</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>uniprot_entry <span class="op">=</span> <span class="st">'P78380'</span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>gene_name <span class="op">=</span> <span class="st">'OLR1'</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>length <span class="op">=</span> <span class="dv">273</span></span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name, uniprot_entry, gene_name, length, sep<span class="op">=</span><span class="st">'   '</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -965,11 +963,11 @@ following format:</p></li>
 <div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <pre><code><span><span class="va">enzyme</span> <span class="op">=</span> <span class="fu">input</span><span class="op">(</span><span class="st">'Please enter the name of an enzyme: '</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="va">enzyme</span>, <span class="st">'is an enzyme.'</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span><span class="va">length</span> <span class="op">=</span> <span class="fu">input</span><span class="op">(</span><span class="st">'How many amino acids does the enzyme contain? '</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="va">enzyme</span>, <span class="st">'is an enzyme containing a total number of'</span>, <span class="va">length</span>, <span class="st">'amino acids.'</span><span class="op">)</span></span></code></pre>
 </div>
 </div>
@@ -1090,7 +1088,7 @@ To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>total_items <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(total_items))</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1102,7 +1100,7 @@ To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>total_values <span class="op">=</span> <span class="fl">3.2</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(total_values))</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1114,7 +1112,7 @@ To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="fl">16.</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(temperature))</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1126,7 +1124,7 @@ To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>phase <span class="op">=</span> <span class="fl">12.5</span><span class="op">+</span><span class="ot">1.5j</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(phase))</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1272,8 +1270,7 @@ format:</p>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>value_type <span class="op">=</span> <span class="bu">type</span>(value)</span>
 <span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value'</span>, value, <span class="st">'is an instance of'</span>, value_type)</span>
-<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>			</span></code></pre>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value'</span>, value, <span class="st">'is an instance of'</span>, value_type)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1379,7 +1376,7 @@ as a function.
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>value_a <span class="op">=</span> <span class="st">'12'</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(value_a, <span class="bu">type</span>(value_a))</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1391,8 +1388,8 @@ as a function.
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>value_b <span class="op">=</span> <span class="bu">int</span>(value_a)</span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>		</span>
-<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(value_b, <span class="bu">type</span>(value_b))	</span></code></pre>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(value_b, <span class="bu">type</span>(value_b))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1405,7 +1402,7 @@ a <code>ValueError</code> is raised:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>value_a <span class="op">=</span> <span class="st">'12y'</span></span>
-<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(value_a, <span class="bu">type</span>(value_a))</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1439,7 +1436,7 @@ code is referred to as <em>debugging</em>.
 <p>We have been given the following snippet written in Python 3:</p>
 <pre><code><span><span class="va">value_a</span> <span class="op">=</span> <span class="fl">3</span></span>
 <span><span class="va">value_b</span> <span class="op">=</span> <span class="st">'2'</span></span>
-<span>      </span>
+<span></span>
 <span><span class="va">result</span> <span class="op">=</span> <span class="va">value_a</span> <span class="op">+</span> <span class="va">value_b</span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="va">value_a</span>, <span class="st">'+'</span>, <span class="va">value_b</span>, <span class="st">'='</span>, <span class="va">result</span><span class="op">)</span></span></code></pre>
 <p>but when the code is executed, we encounter an error message as
@@ -1471,7 +1468,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
 <span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>value_b <span class="op">=</span> <span class="st">'2'</span></span>
 <span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> value_a <span class="op">+</span> <span class="bu">int</span>(value_b)</span>
-<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a>			</span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(value_a, <span class="st">'+'</span>, value_b, <span class="st">'='</span>, result)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1524,9 +1521,9 @@ user’s response to an <kbd>input()</kbd> request is numeric, Python will
 <p>We may use <em>type conversion</em> in conjunction with the values
 returned by the <kbd>input()</kbd> function:</p>
 <pre><code><span><span class="va">response</span> <span class="op">=</span> <span class="fu">input</span><span class="op">(</span><span class="st">'Please enter a numeric value: '</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span><span class="va">response_numeric</span> <span class="op">=</span> <span class="fu">float</span><span class="op">(</span><span class="va">response</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="st">'response:'</span>, <span class="va">response</span><span class="op">)</span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="st">'response type:'</span>, <span class="fu">type</span><span class="op">(</span><span class="va">response</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="st">'response_numeric:'</span>, <span class="va">response_numeric</span><span class="op">)</span></span>
@@ -1575,7 +1572,7 @@ asterisk (<code>*</code>) sign.</p>
 <span><span class="va">length</span> <span class="op">=</span> <span class="fu">input</span><span class="op">(</span><span class="st">'How many amino acids does the enzyme contain? '</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">nucleotides</span> <span class="op">=</span> <span class="fl">3</span> <span class="op">*</span> <span class="fu">int</span><span class="op">(</span><span class="va">length</span><span class="op">)</span></span>
-<span>      </span>
+<span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="va">enzyme</span>, <span class="st">'is an enzyme with'</span>, <span class="va">length</span>, <span class="st">'amino acids and'</span>,  <span class="va">nucleotides</span>, <span class="st">'nucleotides.'</span><span class="op">)</span></span></code></pre>
 </div>
 </div>
@@ -1684,7 +1681,7 @@ To recapitulate on what we have done so far, we start off by reviewing
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>total_items <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total_items) </span></code></pre>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total_items)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1761,7 +1758,7 @@ stored in <em>another</em> variable:
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>total_items <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total_items)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1897,8 +1894,7 @@ to work out how it works.
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>q1_a <span class="op">=</span> <span class="fl">5.8</span> <span class="op">*</span> <span class="fl">3.3</span></span>
-<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Result:'</span>, q1_a, <span class="st">'is an instance of'</span>, <span class="bu">type</span>(q1_a))</span>
-<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Result:'</span>, q1_a, <span class="st">'is an instance of'</span>, <span class="bu">type</span>(q1_a))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1909,8 +1905,7 @@ to work out how it works.
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>q1_b <span class="op">=</span> <span class="dv">180</span> <span class="op">/</span> <span class="dv">6</span></span>
-<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Result:'</span>, q1_b, <span class="st">'is an instance of'</span>, <span class="bu">type</span>(q1_b))</span>
-<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Result:'</span>, q1_b, <span class="st">'is an instance of'</span>, <span class="bu">type</span>(q1_b))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1921,8 +1916,7 @@ to work out how it works.
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>q1_c <span class="op">=</span> <span class="dv">35</span> <span class="op">-</span> <span class="fl">3.0</span></span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Result:'</span>, q1_c, <span class="st">'is an instance of'</span>, <span class="bu">type</span>(q1_c))</span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Result:'</span>, q1_c, <span class="st">'is an instance of'</span>, <span class="bu">type</span>(q1_c))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1933,8 +1927,7 @@ to work out how it works.
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>q1_d <span class="op">=</span> <span class="dv">35</span> <span class="op">-</span> <span class="dv">3</span></span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Result:'</span>, q1_d, <span class="st">'is an instance of'</span>, <span class="bu">type</span>(q1_d))</span>
-<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Result:'</span>, q1_d, <span class="st">'is an instance of'</span>, <span class="bu">type</span>(q1_d))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1990,7 +1983,7 @@ i.e. <code>float</code> covers <code>int</code>, but not vice-versa.
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>big_num <span class="op">=</span> <span class="dv">2</span> <span class="op">**</span> <span class="dv">1000</span></span>
 <span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a>big_num_str <span class="op">=</span> <span class="bu">str</span>(big_num)</span>
 <span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>big_num_len <span class="op">=</span> <span class="bu">len</span>(big_num_str)</span>
-<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb96-5"><a href="#cb96-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Length of 2**1000:'</span>, big_num_len)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -2215,9 +2208,9 @@ operation:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">18.84956</span></span>
 <span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb116-3"><a href="#cb116-3" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> r <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb116-5"><a href="#cb116-5" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> c <span class="op">/</span> d</span>
-<span id="cb116-6"><a href="#cb116-6" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb116-6"><a href="#cb116-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb116-7"><a href="#cb116-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The value of pi calculated to 5 decimal places:'</span>, <span class="bu">round</span>(pi, <span class="dv">5</span>))</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -2262,7 +2255,7 @@ Such an expression can <em>only</em> be evaluated correctly if we do the
 multiplication first and then perform the addition. This means that the
 evaluation is done as follows:
 </p>
-<p><span class="math display">\[given:3 \times 9  = 27\]</span> <span class="math display">\[\implies x = 2 + 27\]</span><br><span class="math display">\[ = 29\]</span></p>
+<p><span class="math display">\[given:3 \times 9  = 27\]</span> <span class="math display">\[\implies x = 2 + 27\]</span> <span class="math display">\[ = 29\]</span></p>
 <p>For instance, in an expression such as:</p>
 <p><span class="math display">\[x = 2 \times (3 + (5 -
 1)^2)\]</span></p>
@@ -2346,8 +2339,7 @@ expressions:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a>q1_a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span></span>
-<span id="cb124-2"><a href="#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'3 * 2 / 4 ='</span>, q1_a)</span>
-<span id="cb124-3"><a href="#cb124-3" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb124-2"><a href="#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'3 * 2 / 4 ='</span>, q1_a)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2358,8 +2350,7 @@ expressions:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a>q1_b <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span></span>
-<span id="cb126-2"><a href="#cb126-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'5 + 3 * 2 / 4 ='</span>, q1_b)</span>
-<span id="cb126-3"><a href="#cb126-3" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb126-2"><a href="#cb126-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'5 + 3 * 2 / 4 ='</span>, q1_b)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2370,8 +2361,7 @@ expressions:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a>q1_c <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span> <span class="op">+</span> <span class="dv">5</span></span>
-<span id="cb128-2"><a href="#cb128-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'3 * 2 / 4 + 5 ='</span>, q1_c)</span>
-<span id="cb128-3"><a href="#cb128-3" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb128-2"><a href="#cb128-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'3 * 2 / 4 + 5 ='</span>, q1_c)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2406,8 +2396,7 @@ expressions:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>q2_a <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> (<span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span>) <span class="op">*</span> <span class="dv">3</span></span>
-<span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'5 + (2 / 4) * 3 ='</span>, q2_a)</span>
-<span id="cb132-3"><a href="#cb132-3" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'5 + (2 / 4) * 3 ='</span>, q2_a)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2418,8 +2407,7 @@ expressions:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a>q2_b <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> (<span class="dv">2</span> <span class="op">*</span> <span class="dv">3</span>) <span class="op">/</span> <span class="dv">4</span></span>
-<span id="cb134-2"><a href="#cb134-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'5 + (2 * 3) / 4 ='</span>, q2_b)</span>
-<span id="cb134-3"><a href="#cb134-3" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb134-2"><a href="#cb134-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'5 + (2 * 3) / 4 ='</span>, q2_b)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2455,10 +2443,9 @@ expressions:</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb138-2"><a href="#cb138-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb138-3"><a href="#cb138-3" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb138-3"><a href="#cb138-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb138-4"><a href="#cb138-4" aria-hidden="true" tabindex="-1"></a>q3_a <span class="op">=</span> (a <span class="op">+</span> b) <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb138-5"><a href="#cb138-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'(a + b)^2 ='</span>, q3_a)</span>
-<span id="cb138-6"><a href="#cb138-6" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb138-5"><a href="#cb138-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'(a + b)^2 ='</span>, q3_a)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2513,8 +2500,7 @@ strings and / or string variables.
 <span id="cb142-10"><a href="#cb142-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb142-11"><a href="#cb142-11" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> full_name <span class="op">+</span> NEW_LINE <span class="op">+</span> SEPARATOR <span class="op">+</span> NEW_LINE <span class="op">+</span> <span class="st">'DoB: '</span> <span class="op">+</span> birthday</span>
 <span id="cb142-12"><a href="#cb142-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb142-13"><a href="#cb142-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data)</span>
-<span id="cb142-14"><a href="#cb142-14" aria-hidden="true" tabindex="-1"></a>   </span></code></pre>
+<span id="cb142-13"><a href="#cb142-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2605,9 +2591,9 @@ mathematical operations in Python</a>.</p></li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb149-1"><a href="#cb149-1" aria-hidden="true" tabindex="-1"></a>glutamine_codon <span class="op">=</span> <span class="st">'CAG'</span></span>
-<span id="cb149-2"><a href="#cb149-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb149-2"><a href="#cb149-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb149-3"><a href="#cb149-3" aria-hidden="true" tabindex="-1"></a>polyq_codons <span class="op">=</span> glutamine_codon <span class="op">*</span> <span class="dv">36</span></span>
-<span id="cb149-4"><a href="#cb149-4" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb149-4"><a href="#cb149-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb149-5"><a href="#cb149-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Polyglutamine codons with 36 repeats:'</span>, polyq_codons)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -2632,7 +2618,7 @@ mathematical operations in Python</a>.</p></li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb151-1"><a href="#cb151-1" aria-hidden="true" tabindex="-1"></a>polyq_codons_length <span class="op">=</span> <span class="bu">len</span>(polyq_codons)</span>
-<span id="cb151-2"><a href="#cb151-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb151-2"><a href="#cb151-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb151-3"><a href="#cb151-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Number of nucleotides in a polyglutamine with 36 repeats:'</span>, polyq_codons_length)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -2675,9 +2661,8 @@ mathematical operations in Python</a>.</p></li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a>polyq_peptide_length <span class="op">=</span> polyq_codons_length <span class="op">/</span> amino_acids_per_codon</span>
-<span id="cb154-2"><a href="#cb154-2" aria-hidden="true" tabindex="-1"></a>	</span>
-<span id="cb154-3"><a href="#cb154-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Number of amino acids in a polyglutamine with 36 repeats:'</span>, polyq_peptide_length)</span>
-<span id="cb154-4"><a href="#cb154-4" aria-hidden="true" tabindex="-1"></a> </span></code></pre>
+<span id="cb154-2"><a href="#cb154-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb154-3"><a href="#cb154-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Number of amino acids in a polyglutamine with 36 repeats:'</span>, polyq_peptide_length)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2701,9 +2686,9 @@ mathematical operations in Python</a>.</p></li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb156-1"><a href="#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value:'</span>, amino_acids_per_codon, <span class="st">'- Type:'</span>, <span class="bu">type</span>(amino_acids_per_codon))</span>
-<span id="cb156-2"><a href="#cb156-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb156-2"><a href="#cb156-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb156-3"><a href="#cb156-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value:'</span>, polyq_codons_length, <span class="st">'- Type:'</span>, <span class="bu">type</span>(polyq_codons_length))</span>
-<span id="cb156-4"><a href="#cb156-4" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb156-4"><a href="#cb156-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb156-5"><a href="#cb156-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value:'</span>, polyq_peptide_length, <span class="st">'- Type:'</span>, <span class="bu">type</span>(polyq_peptide_length))</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -2750,13 +2735,13 @@ floating point number.
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb158-1"><a href="#cb158-1" aria-hidden="true" tabindex="-1"></a>polyq_peptide_length <span class="op">=</span> polyq_codons_length <span class="op">//</span> amino_acids_per_codon</span>
-<span id="cb158-2"><a href="#cb158-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb158-2"><a href="#cb158-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb158-3"><a href="#cb158-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Number of amino acids in a polyglutamine with 36 repeats:'</span>, polyq_peptide_length)</span>
-<span id="cb158-4"><a href="#cb158-4" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb158-4"><a href="#cb158-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb158-5"><a href="#cb158-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value:'</span>, amino_acids_per_codon, <span class="st">'- Type:'</span>, <span class="bu">type</span>(amino_acids_per_codon))</span>
-<span id="cb158-6"><a href="#cb158-6" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb158-6"><a href="#cb158-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb158-7"><a href="#cb158-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value:'</span>, polyq_codons_length, <span class="st">'- Type:'</span>, <span class="bu">type</span>(polyq_codons_length))</span>
-<span id="cb158-8"><a href="#cb158-8" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb158-8"><a href="#cb158-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb158-9"><a href="#cb158-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Value:'</span>, polyq_peptide_length, <span class="st">'- Type:'</span>, <span class="bu">type</span>(polyq_peptide_length))</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -2833,7 +2818,7 @@ given:</p>
 <code>y_2</code>. Store the result of your test in another variable
 called <code>equivalence</code>. Display the results in the following
 format:</li>
-</ol><pre><code>Where a = XX and b = XX: 
+</ol><pre><code>Where a = XX and b = XX:
 y1 is equal to y2: [True/False]</code></pre>
 </div>
 </div>
@@ -2852,10 +2837,10 @@ y1 is equal to y2: [True/False]</code></pre>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb164-1"><a href="#cb164-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">15</span></span>
 <span id="cb164-2"><a href="#cb164-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb164-3"><a href="#cb164-3" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb164-3"><a href="#cb164-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb164-4"><a href="#cb164-4" aria-hidden="true" tabindex="-1"></a>y_1 <span class="op">=</span> (a <span class="op">+</span> b) <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb164-5"><a href="#cb164-5" aria-hidden="true" tabindex="-1"></a>y_2 <span class="op">=</span> a <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> a <span class="op">*</span> b <span class="op">+</span> b <span class="op">**</span> <span class="dv">2</span> </span>
-<span id="cb164-6"><a href="#cb164-6" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb164-5"><a href="#cb164-5" aria-hidden="true" tabindex="-1"></a>y_2 <span class="op">=</span> a <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> a <span class="op">*</span> b <span class="op">+</span> b <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb164-6"><a href="#cb164-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb164-7"><a href="#cb164-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'y1 ='</span>, y_1)</span>
 <span id="cb164-8"><a href="#cb164-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'y2 ='</span>, y_2)</span></code></pre>
 </div>
@@ -2882,7 +2867,7 @@ y1 is equal to y2: [True/False]</code></pre>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb166-1"><a href="#cb166-1" aria-hidden="true" tabindex="-1"></a>equivalence <span class="op">=</span> y_1 <span class="op">==</span> y_2</span>
-<span id="cb166-2"><a href="#cb166-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb166-2"><a href="#cb166-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb166-3"><a href="#cb166-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Where a ='</span>, a, <span class="st">' and b='</span>, b)</span>
 <span id="cb166-4"><a href="#cb166-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'y1 is equal to y2:'</span>, equivalence)</span></code></pre>
 </div>
@@ -2933,7 +2918,7 @@ result of your test and store it in another variable called
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb168-1"><a href="#cb168-1" aria-hidden="true" tabindex="-1"></a>inequivalent <span class="op">=</span> y_1 <span class="op">!=</span> y_2</span>
-<span id="cb168-2"><a href="#cb168-2" aria-hidden="true" tabindex="-1"></a>		</span>
+<span id="cb168-2"><a href="#cb168-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb168-3"><a href="#cb168-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inequivalent)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -2958,9 +2943,8 @@ result of your test and store it in another variable called
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb170-1"><a href="#cb170-1" aria-hidden="true" tabindex="-1"></a>inequivalent_negated <span class="op">=</span> <span class="kw">not</span> inequivalent</span>
-<span id="cb170-2"><a href="#cb170-2" aria-hidden="true" tabindex="-1"></a>		</span>
-<span id="cb170-3"><a href="#cb170-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inequivalent_negated)    </span>
-<span id="cb170-4"><a href="#cb170-4" aria-hidden="true" tabindex="-1"></a>	</span></code></pre>
+<span id="cb170-2"><a href="#cb170-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb170-3"><a href="#cb170-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inequivalent_negated)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3328,7 +3312,7 @@ by extension, the more likely it would be to cause problems.</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb196-1"><a href="#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Disjunction: false OR true.</span></span>
-<span id="cb196-2"><a href="#cb196-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">&lt;</span> b <span class="kw">or</span> b <span class="op">&gt;</span> c  </span></code></pre>
+<span id="cb196-2"><a href="#cb196-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">&lt;</span> b <span class="kw">or</span> b <span class="op">&gt;</span> c</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3339,7 +3323,7 @@ by extension, the more likely it would be to cause problems.</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb198-1"><a href="#cb198-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Disjunction: true OR true.</span></span>
-<span id="cb198-2"><a href="#cb198-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">&gt;</span> b <span class="kw">or</span> b <span class="op">&gt;</span> c  </span></code></pre>
+<span id="cb198-2"><a href="#cb198-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">&gt;</span> b <span class="kw">or</span> b <span class="op">&gt;</span> c</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3350,7 +3334,7 @@ by extension, the more likely it would be to cause problems.</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb200-1"><a href="#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Conjunction: true AND true.</span></span>
-<span id="cb200-2"><a href="#cb200-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">&gt;</span> b <span class="kw">and</span> b <span class="op">&gt;</span> c  </span></code></pre>
+<span id="cb200-2"><a href="#cb200-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">&gt;</span> b <span class="kw">and</span> b <span class="op">&gt;</span> c</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3361,7 +3345,7 @@ by extension, the more likely it would be to cause problems.</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb202-1"><a href="#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Conjunction: false and true.</span></span>
-<span id="cb202-2"><a href="#cb202-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">&lt;</span> b <span class="kw">and</span> b <span class="op">&gt;</span> c  </span></code></pre>
+<span id="cb202-2"><a href="#cb202-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">&lt;</span> b <span class="kw">and</span> b <span class="op">&gt;</span> c</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3404,7 +3388,7 @@ by extension, the more likely it would be to cause problems.</li>
 <div class="codewrapper sourceCode" id="cb210">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb210-1"><a href="#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Disjunction and negated conjunction and conjunction: </span></span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb210-1"><a href="#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Disjunction and negated conjunction and conjunction:</span></span>
 <span id="cb210-2"><a href="#cb210-2" aria-hidden="true" tabindex="-1"></a><span class="co"># true AND NOT false AND false</span></span>
 <span id="cb210-3"><a href="#cb210-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">&lt;</span> b <span class="kw">or</span> <span class="kw">not</span> b <span class="op">&lt;</span> c <span class="kw">and</span> b <span class="op">&gt;</span> a</span></code></pre>
 </div>
@@ -3416,7 +3400,7 @@ by extension, the more likely it would be to cause problems.</li>
 <div class="codewrapper sourceCode" id="cb212">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb212-1"><a href="#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Disjunction and negated conjunction - similar to the </span></span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb212-1"><a href="#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Disjunction and negated conjunction - similar to the</span></span>
 <span id="cb212-2"><a href="#cb212-2" aria-hidden="true" tabindex="-1"></a><span class="co"># previous example: true AND NOT (false AND false)</span></span>
 <span id="cb212-3"><a href="#cb212-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">&lt;</span> b <span class="kw">or</span> <span class="kw">not</span> (b <span class="op">&lt;</span> c <span class="kw">and</span> b <span class="op">&gt;</span> a)</span></code></pre>
 </div>
@@ -3451,15 +3435,15 @@ statements down to smaller portions:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb214-1"><a href="#cb214-1" aria-hidden="true" tabindex="-1"></a>age_a, age_b <span class="op">=</span> <span class="dv">15</span>, <span class="dv">35</span></span>
-<span id="cb214-2"><a href="#cb214-2" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb214-2"><a href="#cb214-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb214-3"><a href="#cb214-3" aria-hidden="true" tabindex="-1"></a>are_positive <span class="op">=</span> age_a <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">and</span> age_b <span class="op">&gt;</span> <span class="dv">0</span></span>
-<span id="cb214-4"><a href="#cb214-4" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb214-4"><a href="#cb214-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb214-5"><a href="#cb214-5" aria-hidden="true" tabindex="-1"></a>a_is_older <span class="op">=</span> are_positive <span class="kw">and</span> (age_a <span class="op">&gt;</span> age_b)</span>
 <span id="cb214-6"><a href="#cb214-6" aria-hidden="true" tabindex="-1"></a>b_is_older <span class="op">=</span> are_positive <span class="kw">and</span> (age_a <span class="op">&lt;</span> age_b)</span>
-<span id="cb214-7"><a href="#cb214-7" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb214-7"><a href="#cb214-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb214-8"><a href="#cb214-8" aria-hidden="true" tabindex="-1"></a>a_is_teenager <span class="op">=</span> are_positive <span class="kw">and</span> <span class="dv">12</span> <span class="op">&lt;</span> age_a <span class="op">&lt;</span> <span class="dv">20</span></span>
 <span id="cb214-9"><a href="#cb214-9" aria-hidden="true" tabindex="-1"></a>b_is_teenager <span class="op">=</span> are_positive <span class="kw">and</span> <span class="dv">12</span> <span class="op">&lt;</span> age_b <span class="op">&lt;</span> <span class="dv">20</span></span>
-<span id="cb214-10"><a href="#cb214-10" aria-hidden="true" tabindex="-1"></a>	</span>
+<span id="cb214-10"><a href="#cb214-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb214-11"><a href="#cb214-11" aria-hidden="true" tabindex="-1"></a>a_is_teenager <span class="kw">and</span> b_is_older</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -3534,7 +3518,7 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb222-1"><a href="#cb222-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb222-2"><a href="#cb222-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Given that: </span></span>
+<span id="cb222-2"><a href="#cb222-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Given that:</span></span>
 <span id="cb222-3"><a href="#cb222-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb222-4"><a href="#cb222-4" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">13</span></span>
 <span id="cb222-5"><a href="#cb222-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'1.'</span>, a<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;</span> b)</span></code></pre>
@@ -3759,7 +3743,7 @@ Michaelis-Menten equation:</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb239-1"><a href="#cb239-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb239-2"><a href="#cb239-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">50</span> <span class="co">#mol/L/s </span></span>
+<span id="cb239-2"><a href="#cb239-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">50</span> <span class="co">#mol/L/s</span></span>
 <span id="cb239-3"><a href="#cb239-3" aria-hidden="true" tabindex="-1"></a>k_m <span class="op">=</span> S <span class="op">=</span> <span class="fl">2.5</span> <span class="co">#mol/L</span></span>
 <span id="cb239-4"><a href="#cb239-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb239-5"><a href="#cb239-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Rearranged the equation to</span></span>
@@ -3856,7 +3840,7 @@ any links that you are not going to use.
   "url": "https://learntodiscover.github.io/Basic_Python/instructor/02-input_output.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/instructor/02-input_output.html",
   "dateCreated": "2023-06-12",
-  "dateModified": "2023-05-26",
+  "dateModified": "2023-06-12",
   "datePublished": "2023-06-12"
 }
 

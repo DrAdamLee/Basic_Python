@@ -3,12 +3,11 @@ title: "Functions"
 teaching: 10
 exercises: 2
 ---
-[**Download Chapter pdf**](07-functions.md.pdf)
 
 [**Download Chapter notebook (ipynb)**](07-functions.ipynb)
 
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - What are functions?
 - How are functions created?
@@ -50,7 +49,7 @@ This chapter assumes that you are familiar with the following concepts in Python
 - [Arrays](04-arrays.Rmd)
 - [Loops and Iterations](05-iterations.Rmd)
 
-:::::::::::::::::: 
+::::::::::::::::::
 
 ## Functions {#sec:functions}
 
@@ -69,7 +68,7 @@ There are different ways to create functions in Python. In this course, we will 
 
 :::::::::::::::::::::::::::::::::::: callout
 
-## Remember	
+## Remember
 
 There are several points to remember in relation to functions:
 
@@ -90,10 +89,10 @@ There are several points to remember in relation to functions:
 </p>
 
 <p style='text-align: justify;'>
-- If we do not specify a return value, or fail to terminate a function using <kbd>return</kbd> altogether, the Python interpreter will automatically terminate that function with an implicit ```return None```. Being an *implicit* process, this is generally regarded as a bad practice and should be avoided.	
+- If we do not specify a return value, or fail to terminate a function using <kbd>return</kbd> altogether, the Python interpreter will automatically terminate that function with an implicit ```return None```. Being an *implicit* process, this is generally regarded as a bad practice and should be avoided.
 </p>
 
-:::::::::::::::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::
 
 <p style='text-align: justify;'>
 We implement functions to prevent repetition in our code. It is therefore important for a function to *only* perform a very specific task, so that it can be context-independent. You should therefore avoid incorporating separable tasks inside a single function.
@@ -104,9 +103,9 @@ We implement functions to prevent repetition in our code. It is therefore import
 
 <p style='text-align: justify;'>
 Functions are designed to perform specific tasks. That is why in the majority of cases, they are named using *verbs* --- e.g. <kbd>add()</kbd> or <kbd>print()</kbd>. We use verbs to describe an action, a state, or an occurrence in everyday language. Likewise, this type of nomenclature describes the action performed by a specific function. Name your functions wisely!
-</p>	
+</p>
 
-:::::::::::::::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::
 
 <p style='text-align: justify;'>
 Once you start creating functions for different purposes; after a while, you will have a library of ready-to-use functions to address different needs. This is the primary principle of a popular programming paradigm known as [functional programming](https://en.wikipedia.org/wiki/Functional_programming).
@@ -120,7 +119,7 @@ def add(value_a, value_b):
     """
     Calculates the sum of 2 numeric values
     given as inputs.
-	    
+
     :param value_a: First value.
     :type value_a: int, float
     :param value_b: Second value.
@@ -139,7 +138,7 @@ Once implemented, we can go ahead use the function. We can do so in the same way
 
 ```python
 res = add(2, 5)
-	
+
 print(res)
 ```
 
@@ -148,12 +147,12 @@ print(res)
 ```
 
 :::::::::::::::::::::::::::::::::::: callout
-## Remember	
+## Remember
 
 When calling a function, we should always pass our *positional input arguments* in the order they are defined in the function definition, from left to right.
 
-<p style='text-align: justify;'>	
-This is because in the case of *positional arguments*, as the name suggests, the Python interpreter relies on the *position* of each value to identify its *variable name* in the function signature. The function signature for our ```add``` function is as follows:	
+<p style='text-align: justify;'>
+This is because in the case of *positional arguments*, as the name suggests, the Python interpreter relies on the *position* of each value to identify its *variable name* in the function signature. The function signature for our ```add``` function is as follows:
 </p>
 
 ```
@@ -163,7 +162,7 @@ add(value_a, value_b)
 So in the above example where we say <span style="color: rgb(32, 121, 77);">add(2, 5)</span>, the value <span style="color: rgb(32, 121, 77);">2</span> is identified as the *input argument* for <span style="color: rgb(32, 121, 77);">value_a</span>, and not <span style="color: rgb(32, 121, 77);">value_b</span>. This happens automatically because in our function call, the value <span style="color: rgb(32, 121, 77);">2</span> is written in the first position, where <span style="color: rgb(32, 121, 77);">value_a</span> is defined in our function declaration (signature).
 </p>
 
-:::::::::::::::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::
 
 <p style='text-align: justify;'>
 Alternatively, we can use the name of each *input argument* to pass values onto them in any order. When we use the name of the *input argument* explicitly, we pass the values as *keyword arguments*. This is particularly useful in more complex functions where there are several *input arguments*.
@@ -174,7 +173,7 @@ Let us now use *keyword arguments* to pass values to our <kbd>add()</kbd> functi
 
 ```python
 res = add(value_a=2, value_b=5)
-	
+
 print(res)
 ```
 
@@ -187,7 +186,7 @@ Now even if we changed the order of our arguments, the function would still be a
 
 ```python
 res = add(value_b=2, value_a=5)
-	
+
 print(res)
 ```
 
@@ -197,7 +196,7 @@ print(res)
 
 :::::::::::::::::::::::::::::::::::: callout
 
-## Remember	
+## Remember
 <p style='text-align: justify;'>
 Choose the order of your *input argument* wisely. This is important when your function accepts multiple *input argument*.
 </p>
@@ -213,28 +212,28 @@ def divide(a, b):
 ```
 
 It is also much less likely for someone to use *keywords* to pass arguments to this function -- that is, to say:
-	
+
 
 ```python
 result = divide(a=2, b=4)
 ```
-	
+
 than it is for them to use positional arguments (without any keywords), that is:
-	
+
 
 ```python
 result = divide(2, 4)
 ```
 
 But if we use an arbitrary order, then we risk running into problems:
-	
+
 
 ```python
 def divide_bad(denominator, numerator):
     return numerator / denominator
 ```
 
-<p style='text-align: justify;'>	
+<p style='text-align: justify;'>
 In which case, our function would perform perfectly well if we use *keyword arguments*; however, if we rely on positional arguments and common sense, then the result of the division would be calculated incorrectly.
 </p>
 
@@ -242,16 +241,16 @@ In which case, our function would perform perfectly well if we use *keyword argu
 ```python
 result_a = divide_bad(numerator=2, denominator=4)
 result_b = divide_bad(2, 4)
-		
+
 print(result_a == result_b)
 ```
 
 ```{.output}
 False
 ```
-:::::::::::::::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::: challenge
 
 ## Do it Yourself {#diy:func:tataBoxFinder}
 
@@ -262,30 +261,30 @@ Implement a function called <span style="color: rgb(32, 121, 77);">find_tata</sp
 - if not found, the function should *explicitly* return ```None```.
 
 **Example:**
-	
+
 The function should behave as follows:
 
 ```
 sequence = 'GCAGTGTATAGTC'
-		
+
 res = find_tata(sequence)
-		
+
 ```
 
 ::::::::::::::::: solution
-	
+
 ## DIY ANSWER
 
 ```python
 def find_tata(seq):
     tata_box = 'TATA'
     result = seq.find(tata_box)
-		    
+
     return result
 ```
 :::::::::::::::::
 
-::::::::::::::::::::::::::::::: 
+:::::::::::::::::::::::::::::::
 
 ### **Documentations**
 <p style='text-align: justify;'>
@@ -308,7 +307,7 @@ def add(value_a, value_b):
     """
     Calculates the sum of 2 numeric values
     given as inputs.
-	    
+
     :param value_a: First value.
     :type value_a: int, float
     :param value_b: Second value.
@@ -321,12 +320,12 @@ def add(value_a, value_b):
 ```
 
 :::::::::::::::::::::::::::::::::::: callout
-## Remember	
+## Remember
 <p style='text-align: justify;'>
 You might feel as though you would remember what your own functions do. That, however, is scarcely the case. Functions that we implement tend to perform specialist, and at times, very complex and interconnected processes. Whilst you might remember what a specific function does for a few days after writing it, you would almost certainly have trouble remembering the details in a matter of months. And that is not even considering details regarding the type of the input argument(s) and those of the output. In addition, programmers often share their works with other fellow programmers; be it with their team, or in the context of a publication, or in public repositories as a contribution to the community. Whatever the reason, there is one golden rule: a functionality does not exist unless it is documented.
 </p>
 
-:::::::::::::::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::
 
 <p style='text-align: justify;'>
 Writing the *docstring* on the first line is important because once a function is documented; we can use <kbd>help()</kbd>, which is a built-in function, to access the documentations as follows:
@@ -343,7 +342,7 @@ Help on function add in module __main__:
 add(value_a, value_b)
     Calculates the sum of 2 numeric values
     given as inputs.
-            
+    
     :param value_a: First value.
     :type value_a: int, float
     :param value_b: Second value.
@@ -376,15 +375,15 @@ add(value_a, value_b)
     value_a + value_b -> number
 ```
 
-::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::: challenge
 
 ## Do it Yourself {#diy:func:tataBoxFinderWithDocs}
 
 Re-implement the function you defined in the previous [Do it Yourself](#diy:func:tataBoxFinder) with appropriate documentations.
-	
-	
+
+
 ::::::::::::::::: solution
-	
+
 ## DIY ANSWER
 
 
@@ -394,7 +393,7 @@ def find_tata(seq):
     Finds the location of the TATA-box,
     if one exists, in a polynucleotide
     sequence.
-		    
+
     :param seq: Polynucleotide sequence.
     :type seq: str
     :return: Start of the TATA-box.
@@ -402,13 +401,13 @@ def find_tata(seq):
     """
     tata_box = 'TATA'
     result = seq.find(tata_box)
-		    
+
     return result
 ```
 
 :::::::::::::::::
 
-::::::::::::::::::::::::::::::: 
+:::::::::::::::::::::::::::::::
 
 ### Optional arguments
 
@@ -421,24 +420,24 @@ An example we have already worked with is <kbd>print()</kbd>. We already know th
 </p>
 
 :::::::::::::::::::::::::::::::::::: callout
-## Remember	
+## Remember
 <p style='text-align: justify;'>
-Input arguments that are necessary to call a specific function are referred to as *non-default arguments*. Those whose definition is not mandatory for a function to be called are known as *default* or *optional arguments*.	
+Input arguments that are necessary to call a specific function are referred to as *non-default arguments*. Those whose definition is not mandatory for a function to be called are known as *default* or *optional arguments*.
 </p>
 
 <p style='text-align: justify;'>
 Optional arguments may *only* be defined *after* non-default arguments (if any). If this order is not respected, a ```SyntaxError``` will be raised.
 </p>
 
-:::::::::::::::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::: callout
-## Advanced Topic	
+## Advanced Topic
 <p style='text-align: justify;'>
-The default value defined for *optional arguments* can in theory be an instance of any type in Python. However, it is better and safer to only use *immutable* types as demonstrated in [Table](02-input_output.Rmd#tb:types:nativeTypes) for default values. The rationale behind this principle is beyond the scope of this course, but you can read more about it in the [official documentations](https://docs.python.org/3/tutorial/controlflow.html\#default-argument-values).	
+The default value defined for *optional arguments* can in theory be an instance of any type in Python. However, it is better and safer to only use *immutable* types as demonstrated in [Table](02-input_output.Rmd#tb:types:nativeTypes) for default values. The rationale behind this principle is beyond the scope of this course, but you can read more about it in the [official documentations](https://docs.python.org/3/tutorial/controlflow.html\#default-argument-values).
 </p>
 
-:::::::::::::::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::
 
 <p style='text-align: justify;'>
 To define functions with optional arguments, we need to assign to them a default value. Remember that input arguments are variables with a specific scope. As a result, we can treat our input argument as variables and assign them a value:
@@ -449,7 +448,7 @@ To define functions with optional arguments, we need to assign to them a default
 def prepare_seq(seq, name, upper=False):
     """
     Prepares a sequence to be displayed.
-	    
+
     :param seq: Sequence
     :type seq: str
     :param name: Name of the sequence.
@@ -460,7 +459,7 @@ def prepare_seq(seq, name, upper=False):
     :rtype: str
     """
     template = 'The sequence of {} is: {}'
-	    
+
     if not upper:
         response = template.format(name, seq)
     else:
@@ -475,9 +474,9 @@ Now if we don't explicitly define ```upper``` when calling <kbd>prepare_seq()</k
 
 ```python
 sequence = 'TagCtGC'
-	
+
 prepped = prepare_seq(sequence, 'DNA')
-	
+
 print(prepped)
 ```
 
@@ -490,7 +489,7 @@ If we change the default value of ```False``` for ```upper``` and set to ```True
 
 ```python
 prepped = prepare_seq(sequence, 'DNA', upper=True)
-	
+
 print(prepped)
 ```
 
@@ -499,7 +498,7 @@ The sequence of DNA is: TAGCTGC
 ```
 
 
-::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::: challenge
 
 ## Do it Yourself
 
@@ -511,10 +510,10 @@ Modify the function from previous [Do it Yourself](#diy:func:tataBoxFinderWithDo
 - if ```upper``` is ```True```, then the function should convert the sequence onto uppercase characters before it looks for the <span style="color: rgb(32, 121, 77);">TATA</span>-box.
 
 Do not forget to update the *docstring* of your function.
-	
-	
+
+
 ::::::::::::::::: solution
-	
+
 ## DIY ANSWER
 
 
@@ -524,7 +523,7 @@ def find_tata(seq, upper=False):
     Finds the location of the TATA-box,
     if one exists, in a polynucleotide
     sequence.
-		    
+
     :param seq: Polynucleotide sequence.
     :type seq: str
     :param upper: Whether or not to
@@ -535,26 +534,26 @@ def find_tata(seq, upper=False):
     :rtype: int
     """
     tata_box = 'TATA'
-		    
+
     if not upper:
         result = seq.find(tata_box)
     else:
         seq_prepped = seq.upper()
         result = seq_prepped.find(tata_box)
-		    
+
     return result
 ```
 :::::::::::::::::
 
-::::::::::::::::::::::::::::::: 
+:::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::: callout
-## Remember	
+## Remember
 <p style='text-align: justify;'>
 It is not necessary to implement your functions in this way. It is, however, a very common practice amongst programmers of any language. For that reason, you should be at least familiar with the technique as you are bound to encounter it sooner rather later.
 </p>
 
-:::::::::::::::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::
 
 <p style='text-align: justify;'>
 It is possible to have more than one <kbd>return</kbd> in a function. This is useful when we need to account for different outcomes; such as the one we saw in the previous example with <kbd>prepare_seq()</kbd>.
@@ -567,7 +566,7 @@ This means that we can simplify the process as follows:
 def prepare_seq(seq, name, upper=False):
     """
     Prepares a sequence to be displayed.
-	    
+
     :param seq: Sequence
     :type seq: str
     :param name: Name of the sequence.
@@ -578,10 +577,10 @@ def prepare_seq(seq, name, upper=False):
     :rtype: str
     """
     template = 'The sequence of {} is: {}'
-	    
+
     if not upper:
         return template.format(name, seq)
-	    
+
     seq_upper = seq.upper()
     return template.format(name, seq_upper)
 ```
@@ -600,9 +599,9 @@ Now if we call our function, it will behave in exactly the same way as it did be
 
 ```python
 sequence = 'TagCtGC'
-	
+
 prepped = prepare_seq(sequence, 'DNA')
-	
+
 print(prepped)
 ```
 
@@ -614,7 +613,7 @@ The sequence of DNA is: TagCtGC
 
 ```python
 prepped = prepare_seq(sequence, 'DNA', upper=True)
-	
+
 print(prepped)
 ```
 
@@ -628,12 +627,12 @@ Functions can call other functions. This is what makes them extremely powerful t
 This allows us to devise a network of functions that call each other to perform different tasks at different times, and collectively contribute to the production of one final answer.
 
 :::::::::::::::::::::::::::::::::::: callout
-## Remember	
+## Remember
 Functions must have specialist functionalities. They should, as much as possible, be implemented to perform one task, and one task only.
-	
+
 So if you need to get more things done, do not write more code in one function. This would defy the purpose of functional programming. Instead, consider writing more functions that contain less code and perform more specialist functionalities.
-	
-:::::::::::::::::::::::::::::::::::: 
+
+::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::: discussion
 ## EXAMPLE: A mini toolbox for statistics
@@ -645,7 +644,7 @@ So if you need to get more things done, do not write more code in one function. 
 def mean(arr):
     """
     Calculates the mean of an array.
-		    
+
     :param arr: Array of numbers.
     :type arr: list, tuple, set
     :return: Mean of the values in the array.
@@ -653,20 +652,20 @@ def mean(arr):
     """
     summation = sum(arr)
     length = len(arr)
-		    
+
     result = summation / length
-		    
+
     return result
 ```
-	
+
 Now that we have function to calculate the *mean*, we can go ahead and write a function to calculate the variance, which itself relies on *mean*:
-	
+
 
 ```python
 def variance(arr):
     """
     Calculates the variance of an array.
-		    
+
     :param arr: Array of numbers.
     :type arr: list, tuple, set
     :return: Variance of the values in the array.
@@ -674,30 +673,30 @@ def variance(arr):
     """
     arr_mean = mean(arr)
     denominator = len(arr)
-		    
+
     numerator = 0
-		    
+
     for num in arr:
         numerator += (num - arr_mean) ** 2
-		    
+
     result = numerator / denominator
-		    
+
     return result
 ```
-	
+
 Now we have two functions, which we can use to calculate the *variance* or the *mean* for any array of numbers.
-	
+
 Remember that testing a function a crucial part of its design. So let us go ahead and test our functions:
-	
+
 
 ```python
 numbers = [1, 5, 0, 14.2, -23.344, 945.23, 3.5e-2]
 ```
-	
+
 
 ```python
 numbers_mean = mean(numbers)
-		
+
 print(numbers_mean)
 ```
 
@@ -708,44 +707,44 @@ print(numbers_mean)
 
 ```python
 numbers_variance = variance(numbers)
-		
+
 print(numbers_variance)
 ```
 
 ```{.output}
 109633.35462420408
 ```
-	
+
 Now that we have a function to calculate the *variance*, we could easily go on to calculate the *standard deviation*, too.
-	
+
 The standard deviation is calculated from the square root of variance. We can easily implement this in a new function as follows:
-	
+
 
 ```python
 def stan_dev(arr):
     """
     Calculates the standard deviation of an array.
-		    
+
     :param arr: Array of numbers.
     :type arr: list, tuple, set
     :return: Standard deviation of the values in the array.
     :rtype: float
     """
     from math import sqrt
-		    
+
     var = variance(arr)
-		    
+
     result = sqrt(var)
 
     return result
 ```
-	
+
 Now let's see how it works in practice:
-	
+
 
 ```python
 numbers_std = stan_dev(numbers)
-		
+
 print(numbers_std)
 ```
 
@@ -753,17 +752,17 @@ print(numbers_std)
 331.1092789762982
 ```
 
-:::::::::::::::::::::::::::::::::::: 	
- 
+::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::: challenge 
+
+::::::::::::::::::::::::::::::: challenge
 
 ## Do it Yourself
 
 Write a function that given an array of any values, produces a dictionary containing the value of that array as *keys*, and the count of the values in the original array (their frequencies) as *values*.
-	
+
 **Example:**
-	
+
 For the following array:
 
 
@@ -772,11 +771,11 @@ values = [1, 1.3, 1, 1, 5, 5, 1.3, 'text', 'text', 'something']
 ```
 
 the function should return the above dictionary:
-	
-**Suggestion:** You can add this as a new tool to the statistics mini toolbox.	
-	
+
+**Suggestion:** You can add this as a new tool to the statistics mini toolbox.
+
 ::::::::::::::::: solution
-	
+
 ## DIY ANSWER
 
 
@@ -786,7 +785,7 @@ def count_values(arr):
     Converts an array into a dictionary of
     the unique members (as keys) and their
     counts (as values).
-		    
+
     :param arr: Array containing repeated
                 members.
     :type arr: list, tuple
@@ -796,17 +795,17 @@ def count_values(arr):
     """
     unique = set(arr)
     arr_list = list(arr)
-		    
+
     result = dict()
-		    
+
     for num in unique:
         result[num] = arr_list.count(num)
-		    
+
     return result
 ```
 :::::::::::::::::
 
-::::::::::::::::::::::::::::::: 
+:::::::::::::::::::::::::::::::
 
 
 
@@ -824,8 +823,8 @@ Write a function with the following features:
 
 - Calculate the standard deviation for each array as the square root of the variance. You will have to import the function ```sqrt``` from module ```math```.
 
-- Return a single array containing (in that order) the mean, the variance, and the standard deviation for each array. 
-	
+- Return a single array containing (in that order) the mean, the variance, and the standard deviation for each array.
+
 
 To test the function, combine three arrays in a tuple as follows:
 
@@ -843,7 +842,7 @@ Call the function <kbd>get_basic_stats()</kbd> with this tuple as argument and w
 ```
 STD of array' index, ':' STD
 ```
- 	
+
 The result for the above arrays should be:
 
 ```
@@ -858,7 +857,7 @@ STD of array 2 :  0.14357537702854514
 
 
 ```python
-def mean(arr): 
+def mean(arr):
     """
     Calculates the mean of an array.
     :param arr: Array of numbers.
@@ -870,17 +869,17 @@ def mean(arr):
 
     length = len(arr)
 
-    result = summation / length 
+    result = summation / length
 
     return result
 
 
-def variance(arr): 
+def variance(arr):
     """
     Calculates the variance of an array.
     :param arr: Array of numbers.
     :type arr: list, tuple, set
-    :return: Variance of the values in the array. 
+    :return: Variance of the values in the array.
     :rtype: float
     """
 
@@ -893,19 +892,19 @@ def variance(arr):
     for num in arr:
 
         numerator += (num - arr_mean) ** 2
-		
-        result = numerator / denominator 
+
+        result = numerator / denominator
 
     return result
 
 
 def get_basic_stats(arrays):
     """
-    Calculates the mean, variance and standard deviation for 
+    Calculates the mean, variance and standard deviation for
     a set of arrays.
     :param arrays: An array contain any number of arrays of numbers.
     :type arrays: list, tuple
-    :return: A list of arrays containing the mean, variance and 
+    :return: A list of arrays containing the mean, variance and
     standard deviation for each item in arrays
     :rtype: list
     """
@@ -948,9 +947,9 @@ STD of array 2 :  0.14357537702854514
 
 ::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
-- Functions make repetitive tasks efficient. 
+- Functions make repetitive tasks efficient.
 - Keyword <kbd>def</kbd> is used to create a function.
 - Optional arguments does not require prior definition.
 - Inter-connectivity of functions make them very powerful.
