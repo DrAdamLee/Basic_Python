@@ -14,9 +14,10 @@ on:
         required: true
         default: 'Maintainer (via GitHub)'
       reset:
-        description: 'Should the cached markdown files be reset? (true/false)'
-        required: true
+        description: 'Reset cached markdown files'
+        required: false
         default: false
+        type: boolean
 jobs:
   full-build:
     name: "Build Full Site"
@@ -31,15 +32,7 @@ jobs:
     steps:
 
       - name: "Checkout Lesson"
-        uses: actions/checkout@v2
-
-      - name: "Set up Python"
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.10' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-          cache: 'pip'
-      - run: bash setup.sh
+        uses: actions/checkout@v3
 
       - name: "Set up R"
         uses: r-lib/actions/setup-r@v2
@@ -49,21 +42,17 @@ jobs:
 
       - name: "Set up Pandoc"
         uses: r-lib/actions/setup-pandoc@v2
-        with:
-          pandoc-version: "2.11.4"
 
-      - name: "latex template"
-        run: |
-            mkdir -p ~/.pandoc/templates
-            curl -o ~/.pandoc/templates/eisvogel.latex https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex
+      - name: "Set up Chrome" # for PDF rendering
+        uses: browser-actions/setup-chrome@v1.2.0
 
       - name: "Setup Lesson Engine"
-        uses: milanmlft/actions/setup-sandpaper@main
+        uses: LearnToDiscover/actions/setup-sandpaper@main
         with:
           cache-version: ${{ secrets.CACHE_VERSION }}
 
       - name: "Setup Package Cache"
-        uses: milanmlft/actions/setup-lesson-deps@main
+        uses: LearnToDiscover/actions/setup-lesson-deps@main
         with:
           cache-version: ${{ secrets.CACHE_VERSION }}
 
