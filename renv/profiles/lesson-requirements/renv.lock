@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.0",
+    "Version": "4.3.1",
     "Repositories": [
       {
         "Name": "carpentries",
@@ -17,14 +17,14 @@
     ]
   },
   "Python": {
-    "Version": "3.10.8",
+    "Version": "3.10.6",
     "Type": "virtualenv",
     "Name": "./renv/profiles/lesson-requirements/renv/python/virtualenvs/renv-python-3.10"
   },
   "Packages": {
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.5-4",
+      "Version": "1.5-4.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -36,7 +36,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "e779c7d9f35cc364438578f334cffee2"
+      "Hash": "38082d362d317745fb932e13956dccbb"
     },
     "R6": {
       "Package": "R6",
@@ -491,12 +491,6 @@
       "Version": "0.17.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "RemoteType": "standard",
-      "RemotePkgRef": "renv",
-      "RemoteRef": "renv",
-      "RemoteRepos": "https://cloud.r-project.org",
-      "RemotePkgPlatform": "aarch64-apple-darwin20",
-      "RemoteSha": "0.17.3",
       "Requirements": [
         "utils"
       ],
